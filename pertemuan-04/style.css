@@ -4,7 +4,7 @@ header h1 {
 }
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-start;
     gap : 8px;
