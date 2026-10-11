@@ -1,6 +1,6 @@
 main { 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
 }
 
@@ -159,4 +159,10 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
 }
