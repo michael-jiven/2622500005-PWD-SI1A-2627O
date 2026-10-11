@@ -10,7 +10,7 @@ header h1 {
 }
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap : 8px;
@@ -161,7 +161,7 @@ footer p {
     margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     main {
         grid-template-columns: 1fr 1fr;
     }
