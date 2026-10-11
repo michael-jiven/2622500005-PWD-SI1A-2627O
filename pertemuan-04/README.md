@@ -1,1 +1,11 @@
-# pertemuan-04
+# Pertemuan 4 - CSS3 Layout dan Responsive Web Design
+## Pengembangan
+- Perubahan yang dilakukan: Penerapan Display Flex, Grid, Web Responsive
+- Commit dan push Git : Penerapan Flex Model, Penerapan Grid Column, Penerapan Web Responsive
+## Pengujian
+- Perangkat bergerak: 
+- Desktop: 
+- Galat dan perbaikan: -
+- Validasi CSS: 
+## Repositori
+URL GitHub: https://github.com/michael-jiven/2622500005-PWD-SI1A-2627O
