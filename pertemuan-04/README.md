@@ -5,7 +5,7 @@
 ## Pengujian
 - Perangkat bergerak: Hp (768px) 
 - Desktop: Berhasil 
-- Galat dan perbaikan: Widht = 100% menjadi * {box -sizing: border-box;
+- Galat dan perbaikan: Widht = 100% menjadi * {box -sizing: border-box;}
 - Validasi CSS: 
 ## Repositori
 URL GitHub: https://github.com/michael-jiven/2622500005-PWD-SI1A-2627O
