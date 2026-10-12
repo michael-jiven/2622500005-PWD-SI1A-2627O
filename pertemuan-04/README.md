@@ -3,9 +3,9 @@
 - Perubahan yang dilakukan: Penerapan Display Flex, Grid, Web Responsive
 - Commit dan push Git : Penerapan Flex Model, Penerapan Grid Column, Penerapan Web Responsive
 ## Pengujian
-- Perangkat bergerak: 
-- Desktop: 
-- Galat dan perbaikan: -
+- Perangkat bergerak: Hp (768px) 
+- Desktop: Berhasil 
+- Galat dan perbaikan: Widht = 100% menjadi * {box -sizing: border-box;
 - Validasi CSS: 
 ## Repositori
 URL GitHub: https://github.com/michael-jiven/2622500005-PWD-SI1A-2627O
