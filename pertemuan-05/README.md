@@ -9,7 +9,7 @@ Fitur dan Pengembangan
 [EventClick]: Peristiwa yang terjadi ketika pengguna melakukan tindakan klik apda suatu elemen HTML.
 [EventSubmit]: Peristiwa yang terjadi ketika pengguna melakukan pengiriman formulir.
 [EventInput]: Peristiwa yagn terjaid ketika nilai pada suatu elemen formulir berubah akibat interaksi pengguna.
-[Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
+[EventReset]: Peristiwa yang terjadi ketika pengguna melakukan reset pada formulir.
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 Tambahkan entri setiap kali ada perkembangan penting pada proyek.
 Pengujian
@@ -42,9 +42,14 @@ HASIL AKTUAL : JavaScript berhasil dijalankan]
 [EventInput]: 
 [LANGKAH PENGUJIAN : contactForm.addEventListener("input", () => {
     formFeedback.textContent = "";
-})]
+});]
 [HASIL AKTUAL : "Nama lengkap harus diisi 3 sampai 50 karakter"]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
+
+[EventReset]: 
+[LANGKAH PENGUJIAN : contactForm.addEventListener("reset", () => {
+    formFeedback.textContent = "";
+});]
+[HASIL AKTUAL : input pada formulir reset ]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
