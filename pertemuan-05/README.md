@@ -6,7 +6,7 @@ Fitur dan Pengembangan
 [console.log]: Perubahan pada JavaScript Internal yaitu memunculkan string "JavaScript Berhasil Dijalankan." pada WebDev
 [<script>]: Menghubungkan JavaScript Ekstenal pada index.html
 [addEventListener]: Mendaftarkan event listener pada suatu element HTML.
-[Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
+[EventClick]: Peristiwa yang terjadi ketika pengguna melakukan tindakan klik apda suatu elemen HTML.
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
@@ -18,7 +18,9 @@ Pengujian
 [addEventListener]: [LANGKAH PENGUJIAN : navToggle.addEventListener("click", () => {
     console.log("Tombol navigasi diklik.")
 });] [HASIL AKTUAL : Tombol Navigasi diklik]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
+[EventClick]: [LANGKAH PENGUJIAN : navToggle.addEventListener("click", () => {
+    console.log("Tombol navigasi diklik.")
+});] [HASIL AKTUAL : Tombol Navigasi diklik]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
