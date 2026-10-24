@@ -7,7 +7,7 @@ Fitur dan Pengembangan
 [<script>]: Menghubungkan JavaScript Ekstenal pada index.html
 [addEventListener]: Mendaftarkan event listener pada suatu element HTML.
 [EventClick]: Peristiwa yang terjadi ketika pengguna melakukan tindakan klik apda suatu elemen HTML.
-[Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
+[EventSubmit]: Peristiwa yang terjadi ketika pengguna melakukan pengiriman formulir.
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
@@ -17,11 +17,16 @@ Pengujian
 [<script></script>]: LANGKAH PENGUJIAN : [Menulis kode tag <script src="script.js"> </script> pada index.html] [HASIL AKTUAL : <script scr="script.js"> </script>]
 [addEventListener]: [LANGKAH PENGUJIAN : navToggle.addEventListener("click", () => {
     console.log("Tombol navigasi diklik.")
-});] [HASIL AKTUAL : Tombol Navigasi diklik]
+});] 
+[HASIL AKTUAL : Tombol Navigasi diklik]
 [EventClick]: [LANGKAH PENGUJIAN : navToggle.addEventListener("click", () => {
     console.log("Tombol navigasi diklik.")
-});] [HASIL AKTUAL : Tombol Navigasi diklik]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
+});] 
+[HASIL AKTUAL : Tombol Navigasi diklik]
+[EventSubmit]: [LANGKAH PENGUJIAN : navToggle.addEventListener("click", () => {
+    console.log("Form Dikirim);
+});] 
+[HASIL AKTUAL : Form Dikirim]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
