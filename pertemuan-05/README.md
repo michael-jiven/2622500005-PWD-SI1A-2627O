@@ -10,9 +10,9 @@ Fitur dan Pengembangan
 [EventSubmit]: Peristiwa yang terjadi ketika pengguna melakukan pengiriman formulir.
 [EventInput]: Peristiwa yagn terjaid ketika nilai pada suatu elemen formulir berubah akibat interaksi pengguna.
 [EventReset]: Peristiwa yang terjadi ketika pengguna melakukan reset pada formulir.
-[Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
-Tambahkan entri setiap kali ada perkembangan penting pada proyek.
-Pengujian
+[EventObject]: Object yang disediakan oleh peramban ketika suatu event terjadi.
+
+LANGKAH PENGUJIAN DAN HASIL AKTUAL 
 [console.log]: 
 [LANGKAH PENGUJIAN : Memasukkan string "JavaScript berhasil dijalankan."] 
 HASIL AKTUAL : JavaScript berhasil dijalankan]
@@ -49,12 +49,14 @@ HASIL AKTUAL : JavaScript berhasil dijalankan]
 [LANGKAH PENGUJIAN : contactForm.addEventListener("reset", () => {
     formFeedback.textContent = "";
 });]
-[HASIL AKTUAL : input pada formulir reset ]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
-Perbarui bagian ini setelah melakukan pengujian atau debugging yang relevan.
+[HASIL AKTUAL : data input pada formulir reset ]
+
+[EventObject]: 
+[LANGKAH PENGUJIAN : contactForm.addEventListener("submit", (event) => {
+    console.log(event);
+});]
+
 Riwayat Pengembangan
 Catat perkembangan melalui commit Git yang bermakna.
-[Pesan commit]: [Ringkasan perubahan dan hasil pengujiannya.]
+[]: [Ringkasan perubahan dan hasil pengujiannya.]
 [Pesan commit]: [Ringkasan perubahan dan hasil pengujiannya.]
