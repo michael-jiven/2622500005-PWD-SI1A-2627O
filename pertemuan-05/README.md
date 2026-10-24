@@ -5,7 +5,7 @@ navigasi, dan validasi formulir sisi klien.
 Fitur dan Pengembangan
 [console.log]: Perubahan pada JavaScript Internal yaitu memunculkan string "JavaScript Berhasil Dijalankan." pada WebDev
 [<script>]: Menghubungkan JavaScript Ekstenal pada index.html
-[Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
+[querySelector]: Memilik satu element HTML berdasarkan selector CSS yang diarahkan.
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
 [Nama fitur/tahap]: [Penjelasan singkat perubahan yang dilakukan.]
@@ -15,7 +15,7 @@ Tambahkan entri setiap kali ada perkembangan penting pada proyek.
 Pengujian
 [console.log]: [LANGKAH PENGUJIAN : Memasukkan string "JavaScript berhasil dijalankan."] [HASIL AKTUAL : JavaScript berhasil dijalankan]
 [<script></script>]: LANGKAH PENGUJIAN : [Menulis kode tag <script src="script.js"> </script> pada index.html] [HASIL AKTUAL : <script scr="script.js"> </script>]
-[Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
+[querySelector]: [LANGKAH PENGUJIAN : const jenisPesan = document.querySelector('input[name="jenis_pesan]:checked');] [HASIL AKTUAL : True]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
 [Fitur yang diuji]: [Langkah pengujian dan hasil aktual.]
