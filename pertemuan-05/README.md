@@ -6,7 +6,7 @@ Fitur dan Pengembangan
 [console.log]: Perubahan pada JavaScript Internal yaitu memunculkan string "JavaScript Berhasil Dijalankan." pada WebDev
 [<script>]: Menghubungkan JavaScript Ekstenal pada index.html
 [addEventListener]: Mendaftarkan event listener pada suatu element HTML.
-[EventClick]: Peristiwa yang terjadi ketika pengguna melakukan tindakan klik apda suatu elemen HTML.
+[EventClick]: Peristiwa yang terjadi ketika pengguna melakukan tindakan klik pada suatu elemen HTML.
 [EventSubmit]: Peristiwa yang terjadi ketika pengguna melakukan pengiriman formulir.
 [EventInput]: Peristiwa yagn terjaid ketika nilai pada suatu elemen formulir berubah akibat interaksi pengguna.
 [EventReset]: Peristiwa yang terjadi ketika pengguna melakukan reset pada formulir.
@@ -57,6 +57,11 @@ HASIL AKTUAL : JavaScript berhasil dijalankan]
 });]
 
 Riwayat Pengembangan
-Catat perkembangan melalui commit Git yang bermakna.
-[]: [Ringkasan perubahan dan hasil pengujiannya.]
-[Pesan commit]: [Ringkasan perubahan dan hasil pengujiannya.]
+[Siapkan baseline p5 dari artefak P4]: Menyalin index.html, img, style.css ke Pertemuan 5
+[console.log Javascript]: Tes apakah string "JavaScript berhasil dijalankan" muncul pada WebDev
+[addEventListener]: Mendaftarkan event listener pada elemen HTML
+[EventClick]: Tindakan klik oleh user pada salah satu elemen HTML
+[EventSubmit]: Tindakan submit oleh user pada form HTML
+[EventInput]: Tindakan input data oleh User pada form HTML
+[EventReset]: Tindakan menghapus data yang diinput oleh User karena tidak sesuai syarat pada form HTML
+[EventObject]: Object yang disediakan oleh peramban ketika suatu event terjadi.
