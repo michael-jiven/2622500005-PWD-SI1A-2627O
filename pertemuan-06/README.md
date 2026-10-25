@@ -153,6 +153,11 @@ switch ($programStudi) {
 <p>IPK : <?php echo number_format($ipk, 2, ',', '.'); ?></p>]
 [HASIL AKTUAL : Berhasil. "IPK : 3,00" (Jika "IPK : 3", salah)]
 
+[nilai_null] 
+[LANGKAH PENGUJIAN : 
+<p>Catatan Tambahan : <?php echo $catatanTambahan === null ? "Belum Ada" : $catatanTambahan;?></p>]
+[HASIL AKTUAL : Berhasil. "Catatan Tambahan : Belum Ada" (Jika Catatan Tambahan : null / kosong / dsb, salah)]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -169,3 +174,4 @@ switch ($programStudi) {
 [Menerapkan percabangan switch case] : Menulis dan Penerapan Switch Case pada variable PHP di HTML
 [Menerapkan Perulangan for untuk target belajar] : Menulis kode loop untuk list target belajar
 [Memformat tampilan IPK dengan number_format] : Mengprint variabel IPK menggunakan number_format
+[Menampilkan catatan tambahan berdasarkan nilai null] : Mencoba menampilkan catatan yang muncul berdasarkan nilai null pada variabel PHP di HTML
