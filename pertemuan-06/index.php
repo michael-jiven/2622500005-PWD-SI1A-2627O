@@ -9,7 +9,10 @@
 
   <body>
     <?php
-    echo "PHP berhasil dijalankan.";
+    print "Keluaran menggunakan echo";
+
+
+
     ?>
     <header>
       <div class="header-top">
