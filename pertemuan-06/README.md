@@ -148,6 +148,11 @@ switch ($programStudi) {
 5. Target Belajar Ke-5: Belum Dipetakan.
 "]
 
+[number_format] 
+[LANGKAH PENGUJIAN : 
+<p>IPK : <?php echo number_format($ipk, 2, ',', '.'); ?></p>]
+[HASIL AKTUAL : Berhasil. "IPK : 3,00" (Jika "IPK : 3", salah)]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -163,3 +168,4 @@ switch ($programStudi) {
 [Menerapkan operator ternary pada profil mahasiswa] : Menerapkan operator ternary pada variable PHP di HTML
 [Menerapkan percabangan switch case] : Menulis dan Penerapan Switch Case pada variable PHP di HTML
 [Menerapkan Perulangan for untuk target belajar] : Menulis kode loop untuk list target belajar
+[Memformat tampilan IPK dengan number_format] : Mengprint variabel IPK menggunakan number_format
