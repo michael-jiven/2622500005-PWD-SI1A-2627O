@@ -8,11 +8,9 @@
   </head>
 
   <body>
+    <p>Konten HTML Statis.</p>
     <?php
-    print "Keluaran menggunakan echo";
-
-
-
+    echo "<p>Konten yang dihasilkan oleh PHP.</p>";
     ?>
     <header>
       <div class="header-top">
