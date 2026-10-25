@@ -7,6 +7,9 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [echo & print]: Menulis dan Testing komentar dengan Tag Echo & Print pada HTML index.php
 [<p> & echo <p>] : Menulis, Testing, Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP 
 [<?php $variabel] : Menulis dan Menambahkan deklarasi variabel PHP
+[const] : Menulis dan Menambahkan deklarasi konstanta PHP
+[echo const & variabel] : Menampilkan data dengan variabel dan konstanta PHP
+
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [LaragonStartAll] : 
@@ -33,7 +36,7 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [LANGKAH PENGUJIAN echo<p> : <?php echo "<p>Konten yang dihasilkan oleh PHP</p>>]
 [HASIL AKTUAL : Berhasil. "Konten yang dihasilkan oleh PHP"]
 
-[<?php$variabel] ; 
+[<?php$variabel] :
 [LANGKAH PENGUJIAN :  <?php $nim = "2622500005";
     $namaMahasiswa = "Michael Jiven Singh";
     $programStudi = "SI";
@@ -45,6 +48,16 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
     ?> ] 
 [HASIL AKTUAL : Berhasil. Variabel tidak muncul pada kode View Page Source menandakan bukan string atau tag lain]
 
+[const] : 
+[LANGKAH PENGUJIAN :     
+const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
+const PROFIL_GITHUB = "michael-jiven";]
+[HASIL AKTUAL : Berhasil. Variabel Const tidak muncul pada kode View Page Source menandakan bukan string atau tag lain]
+
+[echoconst&variabel]
+[LANGKAH PENGUJIAN : <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari <strong><?php print NAMA_MATA_KULIAH; ?></strong> pada tahun akademik <?php echo $tahunAkademik; ?>.</p> 
+<a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.]
+[HASIL AKTUAL : Berhasil. Pada index.php berhasil memunculkan data/nilai dari variabel namaMahasiswa & tahunAkademik, dari konstanta NAMA_MATA_KULIAH]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
@@ -53,3 +66,5 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [Mempelajari komentar dan keluaran dengan echo dan print di PHP] : Menulis dan Testing komentar dengan Tag Echo & Print pada HTML index.php
 [Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP] : Menulis, Testing, Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP
 [Menambahkan deklarasi variabel PHP] : Menulis dan Menambahkan deklarasi variabel PHP
+[Menambahkan Konstanta PHP] : Menulis dan Menambahkan deklarasi konstanta PHP
+[Menampilkan data mahasiswa dengna variabel dan konstanta] : Menampilkan data dengan variabel dan konstanta PHP pada HTML
