@@ -11,6 +11,8 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [echo_const&variabel] : Menampilkan data dengan variabel dan konstanta PHP
 [arimatika_variabel] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
 [if_elseif_else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
+[operator_ternary] : Menulis dan Penerapan Operasi Ternary pada variabel PHP di HTML
+[switch] : Menulis dan Penerapan Switch Case pada variable PHP di HTML
 
 
 
@@ -95,6 +97,21 @@ $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "
 <p>Status Mahasiswa : <?php echo $statusAktif ? "Aktif" : "Tidak Aktif"; ?></p>]
 [HASIL AKTUAL : Berhasil. "Program Studi : Sistem Informasi (SI) ; Status Mahsiswa : Aktif]
 
+[switch] 
+[LANGKAH PENGUJIAN :     
+switch ($programStudi) {
+    case "SI" : 
+        $fokusProgramStudi = "Sistem Informasi dan proses bisnis";
+        break;
+    case "TI" : 
+        $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
+        break;
+        default;
+        $fokusProgramStudi = "Belum ditentukan";
+    }
+<p>Fokus Program Studi : <?php echo $fokusProgramStudi ?></p>]
+[HASIL AKTUAL : Berhasil. "Fokus Program Studi : Sistem Informasi dan proses bisnis"]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -108,3 +125,4 @@ $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "
 [Menerapkan pemeriksaan rentang semester] : menerapkan pemeriksaan rentang semester dengan variabel PHP di HTML
 [Menerapkan percabangan if elseif else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
 [Menerapkan operator ternary pada profil mahasiswa] : Menerapkan operator ternary pada variable PHP di HTML
+[Menerapkan percabangan switch case] : Menulis dan Penerapan Switch Case pada variable PHP di HTML

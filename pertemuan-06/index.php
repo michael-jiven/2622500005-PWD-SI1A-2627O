@@ -31,6 +31,17 @@
     }
 
     $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informaatika" : (($programStudi == "BD") ? "Bisnis Digital" : (($programStudi == "PTI") ? "Pendidikan Teknologi Informatika" : "Lainnya"))); 
+
+    switch ($programStudi) {
+      case "SI" : 
+        $fokusProgramStudi = "Sistem Informasi dan proses bisnis";
+        break;
+        case "TI" : 
+        $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
+        break;
+        default;
+        $fokusProgramStudi = "Belum ditentukan";
+    }
     const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
     const PROFIL_GITHUB = "michael-jiven";
     ?>
@@ -73,6 +84,7 @@
         <article>
           <h3>Profil Singkat</h3>
           <p>Program Studi : <?php echo $namaProdi . " (" . $programStudi .")"; ?>
+          <p>Fokus Program Studi : <?php echo $fokusProgramStudi ?></p>
           <p>Status Mahasiswa : <?php echo $statusAktif ? "Aktif" : "Tidak Aktif"; ?></p>
           <p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
           <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
