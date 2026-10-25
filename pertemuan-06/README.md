@@ -3,13 +3,15 @@ Deksripsi :
 Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Peladen 
 
 === Fitur dan Pengembangan ===
-[<? php]: Menulis dan Testing Komentar, Echo, Tag Dasar PHP pada HTML index.php 
-[echo & print]: Menulis dan Testing komentar dengan Tag Echo & Print pada HTML index.php
-[<p> & echo <p>] : Menulis, Testing, Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP 
-[<?php $variabel] : Menulis dan Menambahkan deklarasi variabel PHP
+[<?php]: Menulis dan Testing Komentar, Echo, Tag Dasar PHP pada HTML index.php 
+[echo&print]: Menulis dan Testing komentar dengan Tag Echo & Print pada HTML index.php
+[<p>&echo<p>] : Menulis, Testing, Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP 
+[<?php$variabel] : Menulis dan Menambahkan deklarasi variabel PHP
 [const] : Menulis dan Menambahkan deklarasi konstanta PHP
-[echo const & variabel] : Menampilkan data dengan variabel dan konstanta PHP
-[arimatika variabel] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
+[echo_const&variabel] : Menampilkan data dengan variabel dan konstanta PHP
+[arimatika_variabel] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
+[if_elseif_else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
+
 
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
@@ -74,6 +76,18 @@ $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu d
 <p>Pemeriksaan rentang semester: <?php echo $statusSemester?>]
 [HASIL AKTUAL : Berhasil . "Pemeriksaan rentang semester: Sesuai rentang"]
 
+[if_elseif_else] 
+[LANGKAH PENGUJIAN : 
+    if ($semester < 3) {
+      $keteranganSemester = "Semester awal";
+    } elseif ($semester <= 6) {
+      $keteranganSemester = "Semester menengah";
+    } else {
+      $keteranganSemester = "Semester Akhir";
+    }
+<p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>]
+[HASIL AKTUAL : Berhasil. "Semester : 1 (Semester Awal)" ]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -85,3 +99,4 @@ $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu d
 [Menampilkan data mahasiswa dengna variabel dan konstanta] : Menampilkan data dengan variabel dan konstanta PHP pada HTML
 [Menambahkan operator aritmetika PHP] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
 [Menerapkan pemeriksaan rentang semester] : menerapkan pemeriksaan rentang semester dengan variabel PHP di HTML
+[Menerapkan percabangan if elseif else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML

@@ -22,6 +22,13 @@
     $semesterValid = $semester >= 1 && $semester <= $batasSemester;
     $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa";
 
+    if ($semester < 3) {
+      $keteranganSemester = "Semester awal";
+    } elseif ($semester <= 6) {
+      $keteranganSemester = "Semester menengah";
+    } else {
+      $keteranganSemester = "Semester Akhir";
+    }
     const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
     const PROFIL_GITHUB = "michael-jiven";
     ?>
@@ -63,6 +70,7 @@
 
         <article>
           <h3>Profil Singkat</h3>
+          <p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
           <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
           <p>Pemeriksaan rentang semester: <?php echo $statusSemester?>
           <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
