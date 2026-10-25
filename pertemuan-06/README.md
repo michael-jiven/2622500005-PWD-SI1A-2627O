@@ -3,7 +3,7 @@ Deksripsi :
 Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Peladen 
 
 === Fitur dan Pengembangan ===
-[<?php]: Menulis dan Testing Komentar, Echo, Tag Dasar PHP pada HTML index.php 
+[<? php]: Menulis dan Testing Komentar, Echo, Tag Dasar PHP pada HTML index.php 
 [echo & print]: Menulis dan Testing komentar dengan Tag Echo & Print pada HTML index.php
 [<p> & echo <p>] : Menulis, Testing, Membandingkan keluaran tag HTML dan tag HTML di dalam tag PHP 
 [<?php $variabel] : Menulis dan Menambahkan deklarasi variabel PHP
