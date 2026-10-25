@@ -8,9 +8,15 @@
   </head>
 
   <body>
-    <p>Konten HTML Statis.</p>
     <?php
-    echo "<p>Konten yang dihasilkan oleh PHP.</p>";
+    $nim = "2622500005";
+    $namaMahasiswa = "Michael Jiven Singh";
+    $programStudi = "SI";
+    $tahunAkademik = "2026/2027";
+    $semester = "1";
+    $ipk = "3.00";
+    $statusAktif = true;
+    $catatanTambahan = null;
     ?>
     <header>
       <div class="header-top">
