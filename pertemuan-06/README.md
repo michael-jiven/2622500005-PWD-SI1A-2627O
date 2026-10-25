@@ -112,6 +112,42 @@ switch ($programStudi) {
 <p>Fokus Program Studi : <?php echo $fokusProgramStudi ?></p>]
 [HASIL AKTUAL : Berhasil. "Fokus Program Studi : Sistem Informasi dan proses bisnis"]
 
+[loop]
+[LANGKAH PENGUJIAN : 
+    <ol>
+        <?php 
+        for ($i = 1; $i <= 5; $i++) {
+            echo "<li>Target Belajar Ke-" . $i . ": " ;
+            switch ($i) {
+            case 1:
+                echo "Memahami sintaks dasar PHP.";
+                break;
+            case 2:
+                echo "Menggunakan variabel dan konstanta.";
+                break;
+            case 3:
+                echo "Menerapkan operator dan percabangan.";
+                break;
+            case 4:
+                echo "Menggunakan perulangan for dan while.";
+                break;
+            default:
+                echo "Belum dipetakan.";
+                break;
+              }
+            echo "<?li>";
+            }
+            ?>
+    </ol>]
+[HASIL AKTUAL : Berhasil. 
+"
+1. Target Belajar Ke-1: Memahami sintaks dasar PHP.
+2. Target Belajar Ke-2: Menggunakan variabel dan konstanta.
+3. Target Belajar Ke-3: Menerapkan operator dan percabangan
+4. Target Belajar Ke-4: Menggunakan perulangan for dan white"
+5. Target Belajar Ke-5: Belum Dipetakan.
+"]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -126,3 +162,4 @@ switch ($programStudi) {
 [Menerapkan percabangan if elseif else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
 [Menerapkan operator ternary pada profil mahasiswa] : Menerapkan operator ternary pada variable PHP di HTML
 [Menerapkan percabangan switch case] : Menulis dan Penerapan Switch Case pada variable PHP di HTML
+[Menerapkan Perulangan for untuk target belajar] : Menulis kode loop untuk list target belajar
