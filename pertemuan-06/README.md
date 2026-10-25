@@ -11,6 +11,7 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [echo const & variabel] : Menampilkan data dengan variabel dan konstanta PHP
 [arimatika variabel] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [LaragonStartAll] : 
 [LANGKAH PENGUJIAN : 1. Mengubah index.html menjadi index.php ; 2. Membuka Laragon, Klik Apache httpd-2-4.54-win64-VS16, Klik Start All]
@@ -64,12 +65,14 @@ const PROFIL_GITHUB = "michael-jiven";]
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>]
-[HASIL AKTUAL : Berhasil. "Sis semester hingga batas : 7"]
+[HASIL AKTUAL : Berhasil. "Sisa semester hingga batas : 7"]
 
-
-
-
-
+[pemeriksaan_rentang_semester]
+[LANGKAH PENGUJIAN :
+$semesterValid = $semester >= 1 && $semester <= $batasSemester;
+$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa";
+<p>Pemeriksaan rentang semester: <?php echo $statusSemester?>]
+[HASIL AKTUAL : Berhasil . "Pemeriksaan rentang semester: Sesuai rentang"]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
@@ -81,3 +84,4 @@ $sisaSemester = $batasSemester - $semester;
 [Menambahkan Konstanta PHP] : Menulis dan Menambahkan deklarasi konstanta PHP
 [Menampilkan data mahasiswa dengna variabel dan konstanta] : Menampilkan data dengan variabel dan konstanta PHP pada HTML
 [Menambahkan operator aritmetika PHP] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
+[Menerapkan pemeriksaan rentang semester] : menerapkan pemeriksaan rentang semester dengan variabel PHP di HTML
