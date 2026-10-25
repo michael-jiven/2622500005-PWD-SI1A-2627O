@@ -131,7 +131,7 @@
           <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">Profil GitHub saya</a>.
         </p>
 
-        <form id="contactForm" action="index.html" method="get" novalidate>
+        <form id="contactForm" action="index.php" method="get" novalidate>
           <div class="form-group">
             <label for="nama">Nama Lengkap</label><br />
 
@@ -245,7 +245,7 @@
     </main>
 
     <footer>
-      <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= echo $nim?>]</p>
+      <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
     </footer>
 
     <script src="script.js"></script>

@@ -179,6 +179,12 @@ H / i / s	jam / menit / detik	14 / 05 / 09]
 [LANGKAH PENGUJIAN : 
 <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">Profil GitHub saya</a>.]
 [HASIL AKTUAL : Berhasil. Link "Profil Github Saya" menuju https://github.com/michael-jiven]
+
+[action]
+[LANGKAH PENGUJIAN : 
+<form id="contactForm" action="index.html" method="get" novalidate> menjadi <form id="contactForm" action="index.php" method="get" novalidate>]
+[HASIL AKTUAL : setiap data form yang diinput user bisa dikelola oleh PHP]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -198,3 +204,4 @@ H / i / s	jam / menit / detik	14 / 05 / 09]
 [Menampilkan catatan tambahan berdasarkan nilai null] : Mencoba menampilkan catatan yang muncul berdasarkan nilai null pada variabel PHP di HTML
 [Menampilkan tahun dinamis pada footer] : Menulis date untuk tahun dinamis pada bagian footer
 [Menerapkan sintaks keluaran singkat PHP] : Menulis sintaks singkat PHP untuk menampilkan nilai suatu ekspresi dengan variabel PHP di HTML 
+[Menyesuaikan action formulir ke index.php] : Mengubah alamt action dari index.html menjadi index.php agar setiap data formulir yang diinput user bisa diproses PHP
