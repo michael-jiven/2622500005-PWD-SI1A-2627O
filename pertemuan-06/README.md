@@ -158,6 +158,24 @@ switch ($programStudi) {
 <p>Catatan Tambahan : <?php echo $catatanTambahan === null ? "Belum Ada" : $catatanTambahan;?></p>]
 [HASIL AKTUAL : Berhasil. "Catatan Tambahan : Belum Ada" (Jika Catatan Tambahan : null / kosong / dsb, salah)]
 
+[date]
+[LANGKAH PENGUJIAN : 
+<p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= echo $nim?>]</p>]
+[HASIL AKTUAL : Berhasil. "©2026 Michael Jiven Singh [2622500005] 
+NOTE : 
+Kode	Arti	Contoh
+Y	tahun 4 digit	2026
+y	tahun 2 digit	26
+m	bulan angka, dengan nol di depan	01 sampai 12
+n	bulan angka, tanpa nol	1 sampai 12
+M	bulan singkat (bahasa Inggris)	Oct
+F	bulan lengkap (bahasa Inggris)	October
+d	tanggal, dengan nol di depan	01 sampai 31
+j	tanggal, tanpa nol	1 sampai 31
+D	hari singkat (bahasa Inggris)	Sun
+l	hari lengkap (bahasa Inggris)	Sunday
+H / i / s	jam / menit / detik	14 / 05 / 09]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -175,3 +193,4 @@ switch ($programStudi) {
 [Menerapkan Perulangan for untuk target belajar] : Menulis kode loop untuk list target belajar
 [Memformat tampilan IPK dengan number_format] : Mengprint variabel IPK menggunakan number_format
 [Menampilkan catatan tambahan berdasarkan nilai null] : Mencoba menampilkan catatan yang muncul berdasarkan nilai null pada variabel PHP di HTML
+[Menampilkan tahun dinamis pada footer] : Menulis date untuk tahun dinamis pada bagian footer
