@@ -13,8 +13,7 @@ Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Pelade
 [if_elseif_else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
 [operator_ternary] : Menulis dan Penerapan Operasi Ternary pada variabel PHP di HTML
 [switch] : Menulis dan Penerapan Switch Case pada variable PHP di HTML
-
-
+[<?=...?>] : Menulis sintaks singkat PHP untuk menampilkan nilai suatu ekspresi dengan variabel PHP di HTML
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [LaragonStartAll] : 
@@ -176,6 +175,10 @@ D	hari singkat (bahasa Inggris)	Sun
 l	hari lengkap (bahasa Inggris)	Sunday
 H / i / s	jam / menit / detik	14 / 05 / 09]
 
+[<?=...?>] 
+[LANGKAH PENGUJIAN : 
+<a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">Profil GitHub saya</a>.]
+[HASIL AKTUAL : Berhasil. Link "Profil Github Saya" menuju https://github.com/michael-jiven]
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -194,3 +197,4 @@ H / i / s	jam / menit / detik	14 / 05 / 09]
 [Memformat tampilan IPK dengan number_format] : Mengprint variabel IPK menggunakan number_format
 [Menampilkan catatan tambahan berdasarkan nilai null] : Mencoba menampilkan catatan yang muncul berdasarkan nilai null pada variabel PHP di HTML
 [Menampilkan tahun dinamis pada footer] : Menulis date untuk tahun dinamis pada bagian footer
+[Menerapkan sintaks keluaran singkat PHP] : Menulis sintaks singkat PHP untuk menampilkan nilai suatu ekspresi dengan variabel PHP di HTML 
