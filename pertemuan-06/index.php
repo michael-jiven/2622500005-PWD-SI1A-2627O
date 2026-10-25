@@ -29,6 +29,8 @@
     } else {
       $keteranganSemester = "Semester Akhir";
     }
+
+    $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informaatika" : (($programStudi == "BD") ? "Bisnis Digital" : (($programStudi == "PTI") ? "Pendidikan Teknologi Informatika" : "Lainnya"))); 
     const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
     const PROFIL_GITHUB = "michael-jiven";
     ?>
@@ -70,6 +72,8 @@
 
         <article>
           <h3>Profil Singkat</h3>
+          <p>Program Studi : <?php echo $namaProdi . " (" . $programStudi .")"; ?>
+          <p>Status Mahasiswa : <?php echo $statusAktif ? "Aktif" : "Tidak Aktif"; ?></p>
           <p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
           <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
           <p>Pemeriksaan rentang semester: <?php echo $statusSemester?>

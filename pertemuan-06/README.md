@@ -88,6 +88,13 @@ $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu d
 <p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>]
 [HASIL AKTUAL : Berhasil. "Semester : 1 (Semester Awal)" ]
 
+[operator_ternary]
+[LANGKAH PENGUJIAN :
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informaatika" : (($programStudi == "BD") ? "Bisnis Digital" : (($programStudi == "PTI") ? "Pendidikan Teknologi Informatika" : "Lainnya")));  
+<p>Program Studi : <?php echo $namaProdi . " (" . $programStudi .")"; ?>
+<p>Status Mahasiswa : <?php echo $statusAktif ? "Aktif" : "Tidak Aktif"; ?></p>]
+[HASIL AKTUAL : Berhasil. "Program Studi : Sistem Informasi (SI) ; Status Mahsiswa : Aktif]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -100,3 +107,4 @@ $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu d
 [Menambahkan operator aritmetika PHP] : Menulis, Menambahkan deklarasi variabel Lalu Menerapkan Aritmetika pada variabel PHP di HTML
 [Menerapkan pemeriksaan rentang semester] : menerapkan pemeriksaan rentang semester dengan variabel PHP di HTML
 [Menerapkan percabangan if elseif else] : Menulis dan Penerapan Konsep if, elseif, else pada variabel PHP di HTML
+[Menerapkan operator ternary pada profil mahasiswa] : Menerapkan operator ternary pada variable PHP di HTML
