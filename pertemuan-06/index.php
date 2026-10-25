@@ -8,6 +8,9 @@
   </head>
 
   <body>
+    <?php
+    echo "PHP berhasil dijalankan.";
+    ?>
     <header>
       <div class="header-top">
         <h1>Profil Mahasiswa</h1>

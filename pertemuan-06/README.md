@@ -3,7 +3,7 @@ Deksripsi :
 Dokumentasi pengembangan halaman web pada P6, meliputi PHP Dasar dan Sisi Peladen 
 
 Fitur dan Pengembangan 
-[]: 
+[<?php]: Menulis dan Testing Kode Tag, String PHP pada HTML index.php 
 
 LANGKAH PENGUJIAN DAN HASIL AKTUAL 
 [Laragon StartAll] : 
@@ -14,3 +14,11 @@ LANGKAH PENGUJIAN DAN HASIL AKTUAL
 [LANGKAH PENGUJIAN : Melakukan testing domain localhost setelah Laragon StartAll]
 [HASIL AKTUAL : http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-06/index.php BERHASIL]
 
+[<?php] : 
+[LANGKAH PENGUJIAN : <?php echo "PHP berhasil dijalankan.";?>]
+[HASIL AKTUAL : "PHP berhasil dijalankan ]
+
+Riwayat Pengembangan (COMMIT)
+[Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
+[Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
+[<?php] : Menulis dan Testing Kode tag PHP, String pada HTML index.php
