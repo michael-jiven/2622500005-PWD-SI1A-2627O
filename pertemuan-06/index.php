@@ -13,10 +13,12 @@
     $namaMahasiswa = "Michael Jiven Singh";
     $programStudi = "SI";
     $tahunAkademik = "2026/2027";
-    $semester = "1";
-    $ipk = "3.00";
+    $semester = 1;
+    $ipk = 3.00;
     $statusAktif = true;
     $catatanTambahan = null;
+    $batasSemester = 8;
+    $sisaSemester = $batasSemester - $semester;
 
     const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
     const PROFIL_GITHUB = "michael-jiven";
@@ -59,6 +61,7 @@
 
         <article>
           <h3>Profil Singkat</h3>
+          <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
           <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
 
           <h3>Target Belajar</h3>
