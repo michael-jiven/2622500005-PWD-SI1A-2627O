@@ -185,6 +185,22 @@ H / i / s	jam / menit / detik	14 / 05 / 09]
 <form id="contactForm" action="index.html" method="get" novalidate> menjadi <form id="contactForm" action="index.php" method="get" novalidate>]
 [HASIL AKTUAL : setiap data form yang diinput user bisa dikelola oleh PHP]
 
+[while] 
+[LANGKAH PENGUJIAN :             
+<?php 
+    $nomorSemester = 1;
+    while ($nomorSemester <= 3) {
+    echo "<li>Semester " . $nomorSemester . "</li>";
+    $nomorSemester++;
+}
+?>]
+[HASIL AKTUAL : Berhasil. 
+Semester (Perulangan While):
+1. Semester 1
+2. Semester 2
+3. Semester 3]
+
+
 === Riwayat Pengembangan (COMMIT) ===
 [Peralihan Ke Laragon PHP]: Menyalin index.html, img, style.css ke Pertemuan 6
 [Testing localhost]: Melakukan testing domain localhost setelah Laragon StartAll
@@ -205,3 +221,4 @@ H / i / s	jam / menit / detik	14 / 05 / 09]
 [Menampilkan tahun dinamis pada footer] : Menulis date untuk tahun dinamis pada bagian footer
 [Menerapkan sintaks keluaran singkat PHP] : Menulis sintaks singkat PHP untuk menampilkan nilai suatu ekspresi dengan variabel PHP di HTML 
 [Menyesuaikan action formulir ke index.php] : Mengubah alamt action dari index.html menjadi index.php agar setiap data formulir yang diinput user bisa diproses PHP
+[Menerapkan perulangan while untuk nomor semester] : Menerapkan loop while untuk nomor semester

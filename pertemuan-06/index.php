@@ -121,7 +121,18 @@
             ?>
           </ol>
         </article>
+        <article> 
+          <h3>Semester (Perulangan While):</h3>
+          <ol>
+            <?php 
+            $nomorSemester = 1;
+            while ($nomorSemester <= 3) {
+              echo "<li>Semester " . $nomorSemester . "</li>";
+              $nomorSemester++;
+            }
+            ?>
       </section>
+      
 
       <section id="contact">
         <h2>Kontak</h2>
