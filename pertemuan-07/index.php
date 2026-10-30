@@ -1,3 +1,10 @@
+<?php
+$nama = "";
+if (isset($_GET['nama'])){
+  $nama = $_GET['nama'];
+  print "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
+}
+?>
 <!doctype html>
 <html lang="id">
   <head>
@@ -121,6 +128,18 @@
             ?>
           </ol>
         </article>
+        <article> 
+          <h3>Semester (Perulangan While):</h3>
+          <ol>
+            <?php 
+            $nomorSemester = 1;
+            while ($nomorSemester <= 3) {
+              echo "<li>Semester " . $nomorSemester . "</li>";
+              $nomorSemester++;
+            }
+            ?>
+          <article>
+      </section>
       </section>
 
       <section id="contact">

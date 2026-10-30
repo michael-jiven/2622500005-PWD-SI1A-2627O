@@ -2,11 +2,23 @@
 Pemrosesan Formulir dengna PHP, Validasi Sisi Peladen, dan PRG
 
 === Fitur dan Pengembangan ===
+[$_GET] = data berpasangan anam dan nilai yang ditempelkan di URL (setelah ?) untuk dikirim ke server. Parameter ditentukan oleh atribut name pada input dan PHP membacanya lewat $_GET
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
+[$_GET]
+[LANGKAH PENGUJIAN : <?php
+$nama = "";
+if (isset($_GET['nama'])){
+  $nama = $_GET['nama'];
+  print "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
 
+http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-07/index.php?nama=Michael Jiven Singh
+}
+[HASIL AKTUAL : Berhasil. "Nama yang diterima: Michael Jiven Singh]
+?>]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Menyalin artefak pertemuan-06 ke pertemuan-07 untuk digunakan sebagai baseline] : Menyalin artefak (index.php, script.js, style.css, img) ke pertemuan 07
 [Menguji http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 07/ dengan hasil
 sama dengan http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 06/ " ] : Testing localhost pada pertemuan 07 
+[Mempelajari penggunaan parameter GET] : data berpasangan anam dan nilai yang ditempelkan di URL (setelah ?) untuk dikirim ke server. Parameter ditentukan oleh atribut name pada input dan PHP membacanya lewat $_GET
