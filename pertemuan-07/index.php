@@ -1,7 +1,7 @@
 <?php
 $nama = "";
-if (isset($_GET['nama'])){
-  $nama = $_GET['nama'];
+if (isset($_POST['nama'])){
+  $nama = $_POST['nama'];
   print "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
 }
 ?>
