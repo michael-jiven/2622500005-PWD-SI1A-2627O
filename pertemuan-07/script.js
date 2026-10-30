@@ -86,6 +86,8 @@ contactForm.addEventListener("submit", (event) => {
 
   formFeedback.textContent = "Form berhasil divalidasi.";
   formFeedback.className = "form-feedback-success";
+  console.log("submit dijalankan");
+  contactForm.submit();
 });
 
 contactForm.addEventListener("reset", () => {
