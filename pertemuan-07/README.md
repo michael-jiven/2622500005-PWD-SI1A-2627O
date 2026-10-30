@@ -8,6 +8,8 @@ Pemrosesan Formulir dengna PHP, Validasi Sisi Peladen, dan PRG
 
 [indexGet.php] = peralihan GET dari index.php ke indexGet.php / index.php digunakan untuk POST
 
+[<form id="contactForm" action="index.php" method="post" novalidate>] = peralihan methode="get" ke method="post" pada index.php
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [$_GET]
 [LANGKAH PENGUJIAN : <?php
@@ -35,7 +37,10 @@ index.php (copy) - index.php (rename) - indexGet.php
 http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-07/indexGet.php?nama=Michael+Jiven+Singh&email=budi%40gmail.com&semester=1&tanggal=2026-10-30&jenis_pesan=pertanyaan&minat=HTML&prodi=SI&pesan=testing]
 [HASIL AKTUAL : Berhasil. Data yang telah diinput pada index.php masih terkait pada indexGet.php]
 
-
+[<form id="contactForm" action="index.php" method="post" novalidate>]
+[LANGKAH PENGUJIAN : 
+<form id="contactForm" action="index.php" method="get" novalidate> menjadi<form id="contactForm" action="index.php" method="post" novalidate> pada index.php]
+[HASIL AKTUAL : Berhasil. Pada view-souce(ctrl+u), <form id="contactForm" action="index.php" method="post" novalidate>]
 
 
 
@@ -54,3 +59,4 @@ sama dengan http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 06/ 
 [Mempelajari penggunaan parameter GET] : data berpasangan anam dan nilai yang ditempelkan di URL (setelah ?) untuk dikirim ke server. Parameter ditentukan oleh atribut name pada input dan PHP membacanya lewat $_GET
 [Mempraktikkan pengiriman formulir GET] : meneruskan pengiriman data yang diinput pada formulir setelah seluruh pemeriksaan validasi berhasil.
 [Menyimpan demonstrasi formulir GET] : peralihan GET dari index.php ke indexGet.php / index.php digunakan untuk POST
+[Mengubah formulir utama menjadi POST] : peralihan methode="get" ke method="post" pada index.php
