@@ -346,6 +346,51 @@ if (isset($_POST['nama'])){
           <button type="reset">Batal</button>
           <p id="formFeedback"></p>
         </form>
+        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+          <h3> Data yang Diterima Peladen </h3>
+
+          <p>Nama : 
+            <?= htmlspecialchars($nama, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Email : 
+          <?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Semester : 
+          <?= htmlspecialchars($semesterForm, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Tanggal kunjungan : 
+          <?= htmlspecialchars($tanggal, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Jenis Pesan : 
+          <?= htmlspecialchars($jenisPesan, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Program Studi : 
+          <?= htmlspecialchars($prodi, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+
+        <p>Minat :</p>
+
+        <?php if (is_array($minat) && count($minat) > 0): ?>
+          <ul>
+            <?php foreach ($minat as $topik): ?>
+            <li>
+                <?= htmlspecialchars((string) $topik, ENT_QUOTES, 'UTF-8') ?>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+          <?php else: ?>
+            <p>Tidak ada minat yang dipilih. </p>
+          <?php endif; ?>
+
+          <p>Pesan:</p>
+
+            <p><?= nl2br(htmlspecialchars($pesan, ENT_QUOTES, 'UTF-8')) ?></p>
+        <?php endif; ?>
       </section>
     </main>
 
@@ -353,6 +398,6 @@ if (isset($_POST['nama'])){
       <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
     </footer>
 
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
   </body>
 </html>
