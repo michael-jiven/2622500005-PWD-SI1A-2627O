@@ -1,15 +1,89 @@
 <?php
 $nama = "";
+$pesanKesalahan = '';
 if (isset($_POST['nama'])){
   $nama = $_POST['nama'];
-  print "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
   $email = $_POST['email'] ?? '';
   $semesterForm = $_POST['semester'] ?? '';
   $tanggal = $_POST ['tanggal'] ?? '';
   $jenisPesan = $_POST['jenis_pesan'] ?? '';
   $prodi = $_POST['prodi'] ?? '';
   $pesan = $_POST['pesan'] ?? '';
-  $minat = $_POST['minat'] ?? '';
+  $minat = $_POST['minat'] ?? [];
+
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (trim($nama ?? '') === ''){
+      $pesanKesalahan .= 'Nama lengkap wajib diisi. ' ; 
+    }
+
+    if (trim($email) === '') {
+      $pesanKesalahan .= 'Email wajib diisi.' ;
+    }
+
+    if (trim($semesterForm) === '') {
+      $pesanKesalahan .= 'Semester wajib diisi.' ; 
+    }
+
+    if (trim($tanggal) === '') {
+      $pesanKesalahan .= 'Tanggal kunjungan wajib diisi.' ;
+    }
+
+    if ($jenisPesan === '') {
+      $pesanKesalahan .= 'Jenis pesan wajib dipilih.' ;
+    }
+
+    if ($prodi === '') {
+      $pesanKesalahan .= 'Program studi wajib dipilih.' ;
+    }
+
+    if (trim($pesan) === '') {
+      $pesanKesalahan .= 'Pesan wajib diisi.' ;
+    }
+
+    if (empty($minat)) {
+      $pesanKesalahan .= 'Minat wajib dipilih minimal satu.' ;
+    }
+
+    if (trim($semesterForm) !== '') {
+      $semesterValid = filter_var (
+        $semesterForm,
+        FILTER_VALIDATE_INT
+      );
+
+      if (
+        $semesterValid === false ||
+        $semesterValid < 1 ||
+        $semesterValid > 14
+      ) {
+        $pesanKesalahan .= 'Semester harus berupa bilangan bulat antara 1 dan 14.' ;
+      }
+    }
+    if (trim($email) !== '') {
+      if(filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        $pesanKesalahan .= 'Format email tidak valid.' ;
+      }
+    }
+    if (!in_array($jenisPesan, ['pertanyaan', 'saran'], true)) {
+      $pesanKesalahan .= 'Jenis pesan tidak valid. ';
+    }
+
+    if (!in_array($prodi, ['SI', 'TI', 'BD', 'PTI'], true)) {
+      $pesanKesalahan .= 'Program studi tidak valid.' ;
+    }
+
+    $minatDiizinkan = ['HTML', 'CSS'];
+
+    if (!is_array($minat)) {
+      $pesanKesalahan .= 'Format pilihan topik tidak valid. ';
+    } else {
+      foreach ($minat as $topik) {
+        if (!in_array($topik, $minatDiizinkan, true)) {
+          $pesanKesalahan .= 'Pilihan topik tidak valid.' ;
+          break;
+        }
+      }
+    }
+  }
 }
 ?>
 <!doctype html>
@@ -53,7 +127,7 @@ if (isset($_POST['nama'])){
         case "TI" : 
         $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
         break;
-        default;
+        default:
         $fokusProgramStudi = "Belum ditentukan";
     }
     const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
@@ -97,12 +171,12 @@ if (isset($_POST['nama'])){
 
         <article>
           <h3>Profil Singkat</h3>
-          <p>Program Studi : <?php echo $namaProdi . " (" . $programStudi .")"; ?>
+          <p>Program Studi : <?php echo $namaProdi . " (" . $programStudi .")"; ?></p>
           <p>Fokus Program Studi : <?php echo $fokusProgramStudi ?></p>
           <p>Status Mahasiswa : <?php echo $statusAktif ? "Aktif" : "Tidak Aktif"; ?></p>
           <p>Semester : <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
           <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
-          <p>Pemeriksaan rentang semester: <?php echo $statusSemester?>
+          <p>Pemeriksaan rentang semester: <?php echo $statusSemester?></p>
           <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
           <p>IPK : <?php echo number_format($ipk, 2, ',', '.'); ?></p>
           <p>Catatan Tambahan : <?php echo $catatanTambahan === null ? "Belum Ada" : $catatanTambahan;?></p>
@@ -130,7 +204,7 @@ if (isset($_POST['nama'])){
                 echo "Belum dipetakan.";
                 break;
               }
-              echo "<?li>";
+              echo "</li>";
             }
             ?>
           </ol>
@@ -151,6 +225,11 @@ if (isset($_POST['nama'])){
 
       <section id="contact">
         <h2>Kontak</h2>
+        <?php if ($pesanKesalahan !== ''): ?>
+          <p class="form-feedback-error">
+            <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8')?>
+          </p>
+        <?php endif; ?>
 
         <p>
           Kunjungi
@@ -274,6 +353,6 @@ if (isset($_POST['nama'])){
       <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!--<script src="script.js"></script>-->
   </body>
 </html>

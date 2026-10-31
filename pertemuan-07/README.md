@@ -14,6 +14,15 @@ Pemrosesan Formulir dengna PHP, Validasi Sisi Peladen, dan PRG
 
 [$_POST ?? '' ;] = mengakses data dari berbagai jenis input formulir menggunakan $_POST 
 
+[htmlspecialchars] = mengubah karakter khusus HTML menjadi teks biasa agar aman ditampilkan kembali di halaman (mengamankan keluaran)
+
+[$pesanKesalahan] = variabel penampung pesan kesalahan validasi PHP. Diisi dengan .= setiap ada pemeriksaan yagn gagal, dan tetap kosong jika semua data valid
+
+[filter_var] = memeriksa format data di sisi peladen: FILTER_VALIDATE_INT untuk semester (harus bilangan bulat 1 sampai 14) dan FILTER_VALIDATE_EMAIL untuk email
+
+[in_array] = memastikan nilai pilihan (jenis pesan, program studi, minat) ada di daftar nilai ayng diizinkan
+
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [$_GET]
 [LANGKAH PENGUJIAN : <?php
@@ -72,7 +81,20 @@ name="minat[]" value="HTML" value="CSS"
 const topikDipilih = document.querySelectorAll('input[name="minat"]:checked,input[name="minat[]"]:checked'); ]
 [HASIL AKTUAL : Berhasil. localhost sempat menggunakan js versi sebelum langkah pengujian. Solusi : f12 - network - disable chace - f5 - testing html selagi WebDev. Output : "Nama yang diterima: Michael Jiven Singh"]
 
+[$pesanKesalahan] 
+[LANGKAH PENGUJIAN : 
+Menonaktifkan script.js (    <!--<script src="script.js"></script>-->), mengisi seluruh kolom dengan benar kecuali Email ("bukan-email") 
+        <?php if ($pesanKesalahan !== ''): ?>
+          <p class="form-feedback-error">
+            <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8')?>
+          </p>
+        <?php endif; ?>]
+[HASIL AKTUAL : Berhasil. Output ketika salah menginput form email = "Format email tidak valid."]
 
+[filter_var] 
+[LANGKAH PENGUJIAN : 
+Menonaktifkan script.js (    <!--<script src="script.js"></script>-->), mengisi formulir tanpa memilih minat.]
+[HASIL AKTUAL : Berhasil. Output ketika tidak memilih minat = "Minat wajib minimal dipilih satu."]
 
 
 
@@ -89,3 +111,4 @@ sama dengan http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 06/ 
 [Mengubah formulir utama menjadi POST] : peralihan methode="get" ke method="post" pada index.php
 [Menerima data formulir menggunakan POST] : data berpasangan nama dan nilai yang muncul pada request body dan tiadk ditempellkan di URL untuk dikirim ke sever untuk diolah/diubah. Parameter ditentukan oleh atribut name pada input dan PHP membacanya lewat $_POST
 [Menyesuaikan pembacaan input dan validasi formulir] : mengakses data dari berbagai jenis input formulir menggunakan $_POST 
+[Menampilkan pesan kesalahan validasi PHP] : menampilkan isi $pesanKesalahan di bagian Kontak hanya ketika validasi PHP menghasilkan pesan kesalahan, dengna htmlspecialchars() untuk mengamankan keluaran
