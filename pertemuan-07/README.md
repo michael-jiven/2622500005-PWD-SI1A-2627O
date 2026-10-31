@@ -28,6 +28,20 @@ Pemrosesan Formulir dengan PHP, Validasi Sisi Peladen, dan PRG
 
 [nl2br] = mempertahankan pergantian baris pada pesan menjadi tag br agar pesan beberapa baris tampil sesuai asliny; dipakai setelah teks diamankan
 
+[session_start()] = fungsi yang menyiapkan atau melanjutkan sesi pengguna agar data sementara dapat dipakai pada beberapa permintaa. Harus dipanggil di bagian PHP paling atas, sebelum ada keluaran HTML apa pun
+
+[$_SESSION] = tempat menyimpan data sementara di sisi peladen selama sesi pengguna berlangsung. Pada formulir ini dipakai untuk menyimpan pesan kesalahan validasi dan data formulir (nama, email, semester, tanggal, jenis_pesan, prodi, minat, pesan)
+
+[post-redirect-get(PRG)] = pola pemrosesan formulir yang megnarahkan pengguna dari permintaan POST ke permintaan GET setelah data diproses peladen. Alur : POST - validasi - simpan ke SESSION - Redirect - Get menampilkan data dari session. Maka, refrehs halaman tidak mengirim ulang formulir
+
+[hedaer('Location:index.php')] = mengirim respons pengalihan menuju halaman index.php sehingga harus dipanggil sebelum ada keluaran ke peramban
+
+[exit] = menghentikan eksekusi skrip setelah pengalihan dikirimkan
+
+[unset] = unset() menghapus $_SESSION['pesanKesalahan'] setelah pesan tampil sekali sehingga pesan kesalahan bergunsi sebagai pesan sementara
+
+[!empy($nama)] = kondisi pembungkus bagian Data yang Diterima Peladen menggantikan pemeriksaan metode POST, karena setelah pengalihan halaman diminta dengan GET
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [$_GET]
 [LANGKAH PENGUJIAN : <?php
@@ -163,6 +177,62 @@ Minat :
 Pesan : 
 <b>Mahasiswa</b>(benar) bukan Mahasiswa cetak tebal]
 
+[session,PRG]
+[LANGKAH PENGUJIAN : 
+1. <?php session_start(); 
+2. if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $_SESSION['pesanKesalahan'] = $pesanKesalahan;
+
+  $_SESSION['nama'] = $nama;
+  $_SESSION['email'] = $email;
+  $_SESSION['semester'] = $semester;
+  $_SESSION['tanggal'] = $tanggal;
+  $_SESSION['jenis_pesan'] = $jenisPesan;
+  $_SESSION['prodi'] = $prodi;
+  $_SESSION['minat'] = $minat;
+  $_SESSION['pesan'] = $pesan;
+
+  header('Location: index.php');
+  exit;
+}
+3. $pesanKesalahan = $_SESSION['pesanKesalahan'] ?? '';
+
+$nama = $_SESSION['nama'] ?? '';
+$email = $_SESSION['email'] ?? '';
+$semesterForm = $_SESSION['semester'] ?? '';
+$tanggal = $_SESSION['tanggal'] ?? '';
+$jenisPesan = $_SESSION['jenis_pesan'] ?? '';
+$prodi = $_SESSION['prodi'] ?? '';
+$minat = $_SESSION['minat'] ?? '';
+$pesan = $_SESSION['pesan'] ?? '';
+
+?> 
+4. <?php if ($pesanKesalahan !== ''): ?>
+          <p class="form-feedback-error">
+            <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8')?>
+          </p>
+
+          <?php 
+          unset(
+            $_SESSION['pesanKesalahan']
+          )
+          ?>
+        <?php endif; ?> 
+5. <?php if ($_SERVER['REQUEST_METHOD'] === 'POST): ?> menjadi <?php if (!empty($nama)): ?>]
+[HASIL AKTUAL : Berhasil. Output =
+"Data yang Terima Peladen
+Nama : Michael Jiven Singh
+Email : budi@gmail.com
+Semester : 1 
+Tanggal kunjungna : 2026-10-31
+Jenis Pesan : pertanyaan 
+Program Studi : SI
+Minat :
+• HTML
+Pesan : 
+mantap
+Note : ketika halaman di refresh, data yang diterima peladen masih ada.]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Menyalin artefak pertemuan-06 ke pertemuan-07 untuk digunakan sebagai baseline] : Menyalin artefak (index.php, script.js, style.css, img) ke pertemuan 07
 [Menguji http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 07/ dengan hasil
@@ -175,3 +245,4 @@ sama dengan http://localhost/pwd/0344300002 - PWD- TI1A - 2627O/pertemuan - 06/ 
 [Menyesuaikan pembacaan input dan validasi formulir] : mengakses data dari berbagai jenis input formulir menggunakan $_POST 
 [Menampilkan pesan kesalahan validasi PHP] : menampilkan isi $pesanKesalahan di bagian Kontak hanya ketika validasi PHP menghasilkan pesan kesalahan, dengan htmlspecialchars() untuk mengamankan keluaran
 [Mengamankan keluaran data formulir] : $minat berbentu array, sehingga ditampilkan satu per satu dalam bentuk daftar. Sebelum ditamplikan, dipersika dengan ois_array($minat) dan count($minat) lebih dari 0; setiap elemn diubah menjadi teks dengan (string). Jika kosong, ditampilkan teks "Tidak ada minat yang dipilih.", mempertahankan pergantian baris pada pesan menjadi tag br agar pesan beberapa baris tampil sesuai asliny; dipakai setelah teks diamankan
+[Menerapkan session dan pola PRG] = menyimpan pesan kesalahan dan data formulir ke $_SESSION setelah permintaan POST, mengalihkan pengguna ke index.php dengan header Location lalu exit, mengambil kembali data dari SESSION pada permintaan GET, sertan menghapus pesan kesalahan dengan unset() setelah tampil sekali

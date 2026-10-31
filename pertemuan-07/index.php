@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $nama = "";
 $pesanKesalahan = '';
 if (isset($_POST['nama'])){
@@ -85,6 +87,33 @@ if (isset($_POST['nama'])){
     }
   }
 }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $_SESSION['pesanKesalahan'] = $pesanKesalahan;
+
+  $_SESSION['nama'] = $nama;
+  $_SESSION['email'] = $email;
+  $_SESSION['semester'] = $semester;
+  $_SESSION['tanggal'] = $tanggal;
+  $_SESSION['jenis_pesan'] = $jenisPesan;
+  $_SESSION['prodi'] = $prodi;
+  $_SESSION['minat'] = $minat;
+  $_SESSION['pesan'] = $pesan;
+
+  header('Location: index.php');
+  exit;
+}
+
+$pesanKesalahan = $_SESSION['pesanKesalahan'] ?? '';
+
+$nama = $_SESSION['nama'] ?? '';
+$email = $_SESSION['email'] ?? '';
+$semesterForm = $_SESSION['semester'] ?? '';
+$tanggal = $_SESSION['tanggal'] ?? '';
+$jenisPesan = $_SESSION['jenis_pesan'] ?? '';
+$prodi = $_SESSION['prodi'] ?? '';
+$minat = $_SESSION['minat'] ?? '';
+$pesan = $_SESSION['pesan'] ?? '';
+
 ?>
 <!doctype html>
 <html lang="id">
@@ -229,6 +258,12 @@ if (isset($_POST['nama'])){
           <p class="form-feedback-error">
             <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8')?>
           </p>
+
+          <?php 
+          unset(
+            $_SESSION['pesanKesalahan']
+          )
+          ?>
         <?php endif; ?>
 
         <p>
@@ -346,7 +381,7 @@ if (isset($_POST['nama'])){
           <button type="reset">Batal</button>
           <p id="formFeedback"></p>
         </form>
-        <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+        <?php if (!empty($nama)): ?>
           <h3> Data yang Diterima Peladen </h3>
 
           <p>Nama : 
