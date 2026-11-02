@@ -1,0 +1,296 @@
+/* === DASAR HTML === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family : segoe ui, sans-serif;
+    color:aliceblue;
+    font-weight:bold;
+}
+
+/* === BACKGROUND === */
+.home,
+.produk,
+.profile,
+.registrasi {
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color:black;
+}
+
+/* === NAVIGASI === */
+.navigasi {
+    text-decoration: none;
+    font-weight: bold;
+    color:white;
+    display:block;
+    margin-bottom:70px;
+    border:1px solid aliceblue;
+    border-radius:15px;
+    background:rgba(255,255,255, 0.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    padding:10px;
+    font-size:30px;
+    margin-top:20px;
+    width:100%;
+    text-align:center;
+}
+
+.navigasi:hover {
+    color:blue;
+}
+
+/* === LOGO USAHA === */
+.logo-usaha {
+    display:block;
+    width:270px;
+    height:auto;
+    margin-right:10px;
+    margin-left:10px;
+    padding:10px;
+}
+
+/* === BERANDA === */
+.paragraf-bawah {
+    text-align:justify;
+    font-size:15px;
+    border:1px solid aliceblue;
+    border-radius:15px;
+    background:rgba(255,255,255, 0.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    padding:17px;
+    font-size:15px;
+    margin-right:14px;
+    margin-left:14px
+}
+
+#bungkus {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:120px;
+    flex-direction:row-reverse;
+    padding-right:100px;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+#bungkus h1 {
+    flex:1;
+    text-align:center;
+    white-space: nowrap;
+    margin-left:10px;
+}
+#tengah {
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+#navigasi {
+    width:270px;
+    flex-shrink:0;
+}
+
+.konten {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    background: rgba(255,255,255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top:20px;
+    margin-bottom:30px;
+
+}
+
+#galeri {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0;
+    margin-top:5px;
+    margin-bottom:30px;
+}
+
+.gambar-produk {
+    flex: 0 1 125px;
+    min-width: 0;
+    height: 127px;
+    object-fit: contain;
+}
+
+.paragraf-atas {
+    font-size:30px;
+    text-align:center;
+    margin-top:5px;
+    margin-bottom:5px; 
+}
+
+/* === PRODUK === */
+#tengah {
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+}
+
+#navigasi {
+    width:300px;
+    flex-shrink:0;
+}
+
+.daftar-kartu {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    gap:10px;
+    flex:1;
+}
+
+.kartu {
+    display:flex;
+    align-items:center;
+    gap:1px;
+    border:1px solid aliceblue;
+    width:calc(50% - 10px);
+    border-radius:15px;
+    background:rgba(255,255,255, 0.15);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 10px rgba (0,0,0,0.5);
+    padding:5px;
+}
+
+.kartu img {
+    width:200px;
+    height:auto;
+    object-fit:contain;
+}
+
+.harga {
+    font-size:20px;
+    font-style:italic;
+    font-weight:bold;
+}
+
+/* === PROFILE === */
+.bungkus {
+    display:flex;
+    align-items: flex-start;
+    gap:20px;
+    padding:15px;
+    flex:1;
+    border:1px solid aliceblue;
+    border-radius:15px;
+    background:rgba(255,255,255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow:0 0 10px rgba (0,0,0,0.5);
+    margin-right:240px;
+    margin-top:20px;
+}
+.foto-profil {
+    width:200px;
+    height:auto;
+    border-radius:20px;
+    padding:10px;
+    flex-shrink:0;
+}
+
+.info-profil {
+    font-weight:bold;
+    font-size:17px;
+    flex:1;
+}
+
+/* === FORMULIR REGISTRASI === */
+#contactForm {
+    flex:1;
+    padding:10px;
+    margin:10px;
+    border:1px solid aliceblue;
+    border-radius:15px;
+    background:rgba(255,255,255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    margin-top:1px;
+}
+
+.form-group {
+    margin-bottom:15px;
+}
+
+.form-group label {
+    display:block;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.input-form {
+    width:100%;
+    padding:12px;
+    border:1px solid aliceblue;
+    border-radius:10px;
+    background:rgba(255,255,255, 0.15);
+    color:black;
+    font-family:segoe ui, sans-serif;
+    font-size:16px;
+    outline:none;
+}
+
+.input-form:placeholder {
+    color:grey;
+    opacity:0.8;
+}
+
+.form-feedback-success {
+    display:block;
+    color:lightgreen;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.form-feedback-error {
+    display:block;
+    color : red;
+    font-weight:bold;
+    font-size:18px;
+}
+
+/* === TOMBOL KIRIM/BATAL === */
+.tombol-form {
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.tombol-form button {
+    flex:1;
+    padding:10px;
+    border:1px solid aliceblue;
+    border-radius:10px;
+    background:rgba(255,255,255, 0.15);
+    color:black;
+    font-family:segoe ui, sans-serif;
+    font-size:16px;
+    outline:none;
+}
+
+/* === FOOTER === */
+footer {
+    margin-top:11px;
+    text-align:center;
+    border:1px solid aliceblue;
+    padding:5px;
+    font-size:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.15);
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    backdrop-filter:blur(15px);
+}

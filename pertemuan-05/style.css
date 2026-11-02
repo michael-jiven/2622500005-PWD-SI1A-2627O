@@ -136,15 +136,6 @@ section {
   line-height: 1.5;
 }
 
-/* BAGIAN BELUM LENGKAP: ada satu aturan CSS di sini yang selector dan
-   properti awalnya belum terlihat di screenshot (kemungkinan untuk daftar
-   di #about). Properti yang baru terbaca:
-     color: #333333;
-     margin: 8px 0;
-     padding: 8px 24px;
-     border: 1px solid #e6e6e6;
-   Lengkapi dari PDF, lalu hapus komentar ini. */
-
 /* Bagian Kontak */
 #contact {
   background-color: #f8fafc;
