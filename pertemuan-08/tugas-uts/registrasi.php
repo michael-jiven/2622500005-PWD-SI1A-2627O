@@ -1,4 +1,38 @@
 <?php
+session_start();
+
+$nama = "";
+$pesanKesalahan = '';
+if (isset($_POST['nama'])){
+    $nama = $_POST['nama'];
+    $wa = $_POST['wa'];
+    $jenis = $_POST['jenis'];
+    $jumlah = $_POST['jumlah'];
+    $alamat = $_POST['alamat'];
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (trim($nama ?? '') === ''){
+            $pesanKesalahan .= 'Nama lengkap wajib diisi' ;
+        }
+
+        if (trim($wa) === '') {
+            $pesanKesalahan .= 'Nomor Wa lengkap wajib diisi';
+        }
+
+        if(!in_array($jenis, ['samsung-01', 'samsung-02', 'samsung-03', 'samsung-04', 'samsung-05', 'samsung-06', 'samsung-07'], true)) {
+            $pesanKesalahan .= 'Jenis HP tidak valid';
+        }
+
+        if (
+            $jumlah === false ||
+            $jumlah < 1 ||
+            $jumlah > 10 
+        ) {
+            $pesanKesalahan .= 'Jumlah unit minimal 1 & maksimal 10';
+        }
+        
+    }
+}
 $nama = "Michael Jiven Singh";
 $nim = "2622500005";
 $matkul = "Pemrograman Web Dasar";
@@ -47,7 +81,7 @@ $kelompok_kelas= "SI1A";
                 </div>
 
                 <div class="form-group">
-                    <label for="no-wa">Nomor WhatsApp</label><br />
+                    <label for="wa">Nomor WhatsApp</label><br />
 
                     <input 
                         class="input-form"
@@ -60,7 +94,7 @@ $kelompok_kelas= "SI1A";
                 </div>
 
                 <div class="form-group">
-                    <label for="jenis-hp">Jenis HP</label><br />
+                    <label for="jenis">Jenis HP</label><br />
 
                     <select class="input-form" id="jenis-hp" name="jenis-hp" required>
                         <option value="">-- Pilih Jenis HP yang Ingin Dibeli --</option>
@@ -74,7 +108,7 @@ $kelompok_kelas= "SI1A";
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="jumlah-unit">Jumlah Unit</label><br />
+                    <label for="jumlah">Jumlah Unit</label><br />
                         <input
                             class="input-form"
                             type="number"
