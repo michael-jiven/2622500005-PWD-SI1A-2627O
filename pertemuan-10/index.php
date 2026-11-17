@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $_SESSION['nama'] = $nama;
   $_SESSION['email'] = $email;
-  $_SESSION['semester'] = $semester;
+  $_SESSION['semester'] = $semesterForm;
   $_SESSION['tanggal'] = $tanggal;
   $_SESSION['jenis_pesan'] = $jenisPesan;
   $_SESSION['prodi'] = $prodi;
@@ -111,7 +111,7 @@ $semesterForm = $_SESSION['semester'] ?? '';
 $tanggal = $_SESSION['tanggal'] ?? '';
 $jenisPesan = $_SESSION['jenis_pesan'] ?? '';
 $prodi = $_SESSION['prodi'] ?? '';
-$minat = $_SESSION['minat'] ?? '';
+$minat = $_SESSION['minat'] ?? [];
 $pesan = $_SESSION['pesan'] ?? '';
 
 ?>

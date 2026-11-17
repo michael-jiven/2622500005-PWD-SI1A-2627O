@@ -7,6 +7,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Data_Atribut_Jenis] : pada bagian formulir Kontak, cek setiap elemen input.
 
+[name="minat"] : menangani filed minat yang memiliki beberapa pilihan 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -15,6 +17,10 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Data_Atribut_Jenis] 
 [LANGKAH PENGUJIAN : mengecek setiap elemen input. ~Data~ = nama, email, semester, tanggal kunjungan, jenis pesan, topik yang diminati, program studi. ~Atribut~ = nama, email, semester, tanggal, jenis_pesan, minat[], prodi, pesan. ~Jenis~ = Text, Email., Number, Date, Radio, Checkbox, Select, Textarea]
 [HASIL AKTUAL : Semua data tersedia]
+
+[name="minat"]
+[LANGKAH PENGUJIAN : name="minat"[] ]
+[HASIL AKTUAL : name="minat"[] ada di bagian PHP]
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
