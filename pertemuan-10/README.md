@@ -19,3 +19,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
 [Data_Atribut_Jenis] : Mengidentifikasi kebutuhan data formulir kontak P10
+[Data_Atribut_Jenis] : Menentukan data formulir yang akan disimpan ke basis data
