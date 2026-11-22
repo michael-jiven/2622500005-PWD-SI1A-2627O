@@ -34,6 +34,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [db_pwd_2622500005] : membuat basis data menggunakan menu Database di phpMyAdmin.
 
+[tbl_kontak_2622500005] : membuat tabel untuk menyimpan data formulir Kontak P9 dengan sembilan kolom. 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -70,6 +72,10 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [LANGKAH PENGUJIAN : membuka menu Databse, mengisi nama basis data = db_pwd_2622500005, memilih collation bawaan, lalu klik create]
 [HASIL AKTUAL : Berhasil. Basis data berhasil dibuat dan muncul pada daftar basis data]
 
+[tbl_kontak_2622500005]
+[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005, mengisi nama tabel tbl_kontak_2622500005 dan jumlah kolom (9), klik create table]
+[HASIL AKTUAL : berhasil. Tabel db_pwd_2622500005 berhasil dibuat beserta 9 kolom]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -81,3 +87,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Struktur_Tabel_Kontak] : Memeriksa rancangan akhir struktur tabel kontak
 [Buka_phpMyAdmin] : Memeriksa phpMyAdmin dapat dibuka
 [db_pwd_2622500005] : Membuat basis data db_pwd_2622500005
+[tbl_kontak_2622500005] : membuat tabel tbl_kontak_2622500005
