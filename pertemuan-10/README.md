@@ -24,6 +24,10 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [DATE] : menyimpan nilai tanggal. Dipakai pada tanggal.
 
+[Primary_Key_Auto_Increment] : menentukan atribut id sebagai kunci utama tabel kontak.
+
+[id] : atribut bertipe INT, PRIMARY KEY, dan AUTO_INCREMENT sebagai indentitas unik setiap data kontak.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -39,11 +43,15 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Nama_Database_Tabel] 
 [LANGKAH PENGUJIAN : penulisan nama basis data dan tabel]
-[HASIL AKTUAL : nama basis data = db_pwd_2622500005 dan nama tabel = tbl_kontak_2622500005]
+[HASIL AKTUAL : Berhasil. nama basis data = db_pwd_2622500005 dan nama tabel = tbl_kontak_2622500005]
 
 [Atribut_Tipe_Data] 
 [LANGKAH PENGUJIAN : menambahkan depalan data fomurlir dengan pencocokan nama atribut dan tipe data dengan batasan input. nama = VARCHAR(50), email = VARCHAR(250), semester = TINYIT, tanggal = DATE, jenis_pesan = VARCHAR(20), minat = VARCHAR(50), prodi = VARCHAR(3), pesan = VARCHAR(300)]
-[HASIL AKTUAL : Sesuai. Delapan atribut dan tipe datanya sesuai dengan formulir P7]
+[HASIL AKTUAL : Berhasil. Delapan atribut dan tipe datanya sesuai dengan formulir P7]
+
+[Primary_Key_Auto_Increment] 
+[LANGKAH PENGUJIAN : menambahkan atribut id pada rancangan tabel. id = INT, PRIMARY KEY, A_I centang]
+[HASIL AKTUAL : Berhasil, atribut id sesuai = INT, PRIMARY KEY, A_I centang]
 
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
@@ -52,3 +60,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Data_Atribut_Jenis] : Menentukan data formulir yang akan disimpan ke basis data
 [Nama_Database_Tabel] : Menentukan nama basis data dan tabel P10
 [Artibut_Tipe_Data] : Merancang atribut dan tipe data tabel kontak.
+[Primary_Key_Auto_Increment] : Menentukan primary key dan auto increment tabel kontak
