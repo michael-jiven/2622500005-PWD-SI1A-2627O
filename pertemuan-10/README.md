@@ -3,11 +3,18 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 === Fitur dan Pengembangan ===
 [pertemuan-10] : menyalin aartefak pertemuan-09 ke pertemuan-10 sebagai baseline 
+
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
 
 [Data_Atribut_Jenis] : pada bagian formulir Kontak, cek setiap elemen input.
 
 [name="minat"] : menangani filed minat yang memiliki beberapa pilihan 
+
+[Nama_Database_Tabel] : menentukan nama basis data dan nama tabel sesuai pola P10 dengan NIM 2622500005
+
+[db_pwd_2622500005] : nama basis data untuk menyimpan data aplikasi
+
+[tbl_kontak_2622500005] : nama tabel untuk menyimpan data fomrulir.
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
@@ -21,8 +28,14 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [name="minat"]
 [LANGKAH PENGUJIAN : name="minat"[] ]
 [HASIL AKTUAL : name="minat"[] ada di bagian PHP]
+
+[Nama_Database_Tabel] 
+[LANGKAH PENGUJIAN : penulisan nama basis data dan tabel]
+[HASIL AKTUAL : nama basis data = db_pwd_2622500005 dan nama tabel = tbl_kontak_2622500005]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
 [Data_Atribut_Jenis] : Mengidentifikasi kebutuhan data formulir kontak P10
 [Data_Atribut_Jenis] : Menentukan data formulir yang akan disimpan ke basis data
+[Nama_Database_Tabel] : Menentukan nama basis data dan tabel P10
