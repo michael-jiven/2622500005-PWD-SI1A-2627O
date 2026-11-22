@@ -32,6 +32,7 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Buka_phpMyAdmin] : membuka phpMyAdmin untuk mengelola basis data MySQL. 
 
+[db_pwd_2622500005] : membuat basis data menggunakan menu Database di phpMyAdmin.
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
@@ -65,6 +66,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [LANGKAH PENGUJIAN : memastikan Laragon dan layanana MySQL berjalan, lalu membuka phpMyAdmin]
 [HASIL AKTUAL : Berhasil. phpMyAdmin berhasil dibuka dan menampilkan antarmuka pengelolaan basis data]
 
+[db_pwd_2622500005]
+[LANGKAH PENGUJIAN : membuka menu Databse, mengisi nama basis data = db_pwd_2622500005, memilih collation bawaan, lalu klik create]
+[HASIL AKTUAL : Berhasil. Basis data berhasil dibuat dan muncul pada daftar basis data]
 
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
@@ -76,3 +80,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Primary_Key_Auto_Increment] : Menentukan primary key dan auto increment tabel kontak
 [Struktur_Tabel_Kontak] : Memeriksa rancangan akhir struktur tabel kontak
 [Buka_phpMyAdmin] : Memeriksa phpMyAdmin dapat dibuka
+[db_pwd_2622500005] : Membuat basis data db_pwd_2622500005
