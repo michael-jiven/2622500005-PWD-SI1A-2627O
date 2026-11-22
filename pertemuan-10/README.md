@@ -30,6 +30,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Struktur_Tabel_Kontak] : memeriksa rancangan akhir struktur tabel kontak yang terdiri dari sembilan atribut : id, nama, email semester, tanggal, jenis pesan, minat, prodi, pesan.
 
+[Buka_phpMyAdmin] : membuka phpMyAdmin untuk mengelola basis data MySQL. 
+
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -58,6 +61,11 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Struktur_Tabel_Kontak]
 [LANGKAH PENGUJIAN : memeriksa kembali sembilan atribut tabel : id = INT, PRIMARY KEY, A_I centang ; nama, email, semester, tanggal, jenis_pesan, minat, prodi, pesan. Memastikan seluruh data fomrulir P7 terwakili dan hanya id yang memakai atribut PRIMARY KEY dan AUTO_INCREMENT]
 
+[Buka_phpMyAdmin]
+[LANGKAH PENGUJIAN : memastikan Laragon dan layanana MySQL berjalan, lalu membuka phpMyAdmin]
+[HASIL AKTUAL : Berhasil. phpMyAdmin berhasil dibuka dan menampilkan antarmuka pengelolaan basis data]
+
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -67,3 +75,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Artibut_Tipe_Data] : Merancang atribut dan tipe data tabel kontak.
 [Primary_Key_Auto_Increment] : Menentukan primary key dan auto increment tabel kontak
 [Struktur_Tabel_Kontak] : Memeriksa rancangan akhir struktur tabel kontak
+[Buka_phpMyAdmin] : Memeriksa phpMyAdmin dapat dibuka
