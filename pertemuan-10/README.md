@@ -16,6 +16,14 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [tbl_kontak_2622500005] : nama tabel untuk menyimpan data fomrulir.
 
+[Atribut_Tipe_Data] : merancang atribut dan tipe data tabel kontak
+
+[VARCHAR(n)] : menyimpan data teks dengan panjang maksimal sesuai nilai n. Dipakai pada nama, email, jenis_pesan, minat, prodi dan pesan. 
+
+[TINYIT] : menyimpan bilangan bulat berukuran kecil. Dipakai pada semester.
+
+[DATE] : menyimpan nilai tanggal. Dipakai pada tanggal.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -33,9 +41,14 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [LANGKAH PENGUJIAN : penulisan nama basis data dan tabel]
 [HASIL AKTUAL : nama basis data = db_pwd_2622500005 dan nama tabel = tbl_kontak_2622500005]
 
+[Atribut_Tipe_Data] 
+[LANGKAH PENGUJIAN : menambahkan depalan data fomurlir dengan pencocokan nama atribut dan tipe data dengan batasan input. nama = VARCHAR(50), email = VARCHAR(250), semester = TINYIT, tanggal = DATE, jenis_pesan = VARCHAR(20), minat = VARCHAR(50), prodi = VARCHAR(3), pesan = VARCHAR(300)]
+[HASIL AKTUAL : Sesuai. Delapan atribut dan tipe datanya sesuai dengan formulir P7]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
 [Data_Atribut_Jenis] : Mengidentifikasi kebutuhan data formulir kontak P10
 [Data_Atribut_Jenis] : Menentukan data formulir yang akan disimpan ke basis data
 [Nama_Database_Tabel] : Menentukan nama basis data dan tabel P10
+[Artibut_Tipe_Data] : Merancang atribut dan tipe data tabel kontak.
