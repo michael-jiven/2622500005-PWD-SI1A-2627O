@@ -40,6 +40,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [DDL] : mengenal perintah CREATE DATABASE, USE, dan CREATE TABLE sebagai bentuk SQL dari proses phpMyAdmin. 
 
+[Struktur_Tabel] : memeriksa struktur tabel melalui tab Structure dan perintah DESCRIBE.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -88,6 +90,10 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [LANGKAH PENGUJIAN : menjalankan perintah CREATE DATABASE, USE, dan CREATE TABLE dengan data yang mirip tapi berbeda.]
 [HASIL AKTUAL : Berhasil. CREATE DATABASE tes_262250123; USE tes_262250123; CREATE TABLE tak_262250123 berhasil dibuat]
 
+[Struktur_Tabel]
+[LANGKAH PENGUJIAN : memilih tabel tbl_kontak_2622500005, membuka tab structure lalu menjalankan perintah DESCRIBE tbl_kontak_2622500005;]
+[HASIL AKTUAL : berhasil. Sembilan atribut sesuai rancangan]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -102,3 +108,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [tbl_kontak_2622500005] : membuat tabel tbl_kontak_2622500005
 [Struktur_9_Kolom] : mengisi struktur sembilan kolom kontak
 [DDL] : Memahami perinta CREATE DATABASE, USE, dan CREATE TABLE.
+[Struktur_Tabel] : Memeriksa struktur tabel menggunakan DESCRIBE [nama_tabel]
