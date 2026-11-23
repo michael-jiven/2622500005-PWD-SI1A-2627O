@@ -54,6 +54,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [db_pwd_2622500005.sql] : berkas hasil ekspor yagn berisi struktur tabel dan data awal basis data db_pwd_2622500005
 
+[Periksa_Berkas_SQL] : memeriksa kelengkapan berkas hasil ekspor db_pwd_2622500005.sql pada VS CODE
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -138,6 +140,10 @@ Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang h
 [LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 - membuka tab Export - pilih metode Quick - pilih format SQL - klik Export - namaa file db_pwd_2622500005 - pindah ke C:\laragon\www\2622500005-PWD-SI1A-2627O\pertemuan-10]
 [HASIL AKTUAL : Berhasil. file db_pwd_2622500005.sql berhasil diekspor dan tersimpan pada pertemuan-10]
 
+[Periksa_Berkas_SQL]
+[LANGKAH PENGUJIAN : membuka folder pertemuan-10 - buka berkas db_pwd_2622500005.sql - cari perintah CREATE TABLE dan INSERT INTO - cocokkan nama table, 9 atribut dan data dengan hasil]
+[HASIL AKTUAL : Berhasil. Perintah sesuai, Nama Table sesuai, Atribut sesuai, Hasil Input sesuai]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -159,3 +165,4 @@ Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang h
 [Penyesuaian_Data] : Memeriksa dan memperbaiki data awal tabel kontak
 [Export_SQL] : Menentukan pengaturan ekspor basis data
 [db_pwd_2622500005.sql] : Mengekspor basis data ke berkas SQL
+[Periksa_Berkas_SQL] : Memmeriksa kelengkapan berkas ekspor SQL
