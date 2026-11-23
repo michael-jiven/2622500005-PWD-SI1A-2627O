@@ -42,6 +42,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Struktur_Tabel] : memeriksa struktur tabel melalui tab Structure dan perintah DESCRIBE.
 
+[Insert_Data_Awal] : memasukkan data awal ke tabel kontak menggunakan fitur Insert pada phpMyAdmin. 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -94,6 +96,12 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [LANGKAH PENGUJIAN : memilih tabel tbl_kontak_2622500005, membuka tab structure lalu menjalankan perintah DESCRIBE tbl_kontak_2622500005;]
 [HASIL AKTUAL : berhasil. Sembilan atribut sesuai rancangan]
 
+[Insert_Data_Awal] 
+[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 dan tabel tbl_kontak_2622500005 - membuka tab insert - mengisi nama ; email ; semester ; tangga ; jenis_pesan ; minat ; prodi ; pesan ; id kosong - klik Go - periksa hasil input di menu Browser. 
+Data 1 = 'Michael', 'michaeljiven@gmail.com', 1, '2026-11-24', 'kritik', 'HTML', 'SI', 'Testing'.
+Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CSS', 'BD', Testing 2]
+[Hasil Aktual : Berhasil. Data berhasil dimasukkan tanpa pesan kesalahan, nilai setiap atribut sesuai dan id terbentuk otomatis (1 & 2)]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -109,3 +117,4 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [Struktur_9_Kolom] : mengisi struktur sembilan kolom kontak
 [DDL] : Memahami perinta CREATE DATABASE, USE, dan CREATE TABLE.
 [Struktur_Tabel] : Memeriksa struktur tabel menggunakan DESCRIBE [nama_tabel]
+[Insert_Data_Awal]  : Memasukkan data awal ke tabel kontak
