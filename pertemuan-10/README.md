@@ -50,6 +50,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Kesesuaian_Data] : memeriksa dan memperbaiki data awal tabel kontak agar sesuai dengan karakteristik atribut dan ketentuan formulir P9
 
+[Export_SQL] : menentukan pengaturan ekspor struktur dan data basis data db_pwd_2622500005 menggunakan Export pada phpMyAdmin
+
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -121,10 +124,14 @@ Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CS
 [HASIL AKTUAL : Berhasil. Data 1 & 2 tercatat/tersimpan pada phpMyAmin]
 
 [Kesesuaian_Data] 
-[LANGKAH PENGUJIAN : memeriksa seluruh data pada menu Browse. nama = nama mahasiswa ; email = alamat email ; semester = angka semester ; tanggal = format tanggal ; jenis_pesan = peratanyaan atau saran ; minat = HTML, CSS ; prodi = SI, TI, PTI, BD ; pesan = teks sesuai batasan formulir
+[LANGKAH PENGUJIAN : memeriksa seluruh data pada menu Browse. nama = nama mahasiswa ; email = alamat email ; semester = nomor semester ; tanggal = format tanggal ; jenis_pesan = peratanyaan atau saran ; minat = HTML, CSS, atau kombinasi keduanya ; prodi = SI, TI, PTI, atau BD ; pesan = teks sesuai batasan formulir
 Perbaikan : 
 Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang hasil pada Browse]
 [HASIL AKTUAL : Berhasil. Isi pada Data 1 berhasil diedit]
+
+[Export_SQL] 
+[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 pada panel navigasi phpMyAdmin, membuka tab Export, lalu memriksa pengaturan eksport. Export Method = Quick ; Format = SQL]
+[HASIL AKTUAL : basis data db_pwd_2622500005 terpilih dan pengaturan ekspor menggunakna metode Quick dengan format SQL]
 
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
@@ -145,3 +152,4 @@ Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang h
 [SQL_INSERT] : Mempelajari perintah SQL insert
 [Browse_Data] : memeriksa data awal pada tabel kontak
 [Penyesuaian_Data] : Memeriksa dan memperbaiki data awal tabel kontak
+[Export_SQL] : Menentukan pengaturan ekspor basis data
