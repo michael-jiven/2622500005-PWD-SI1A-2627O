@@ -46,6 +46,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [SQL_INSERT] : mempelajari perintah SQL INSERT sebagai alternatif memasukkan data ke tabel kontak. Perintah ini termasuk kelompok DML (data Manipulation Language)
 
+[Browse_Data] : memeriksa data awal pada tabel kontak menggunakan fitur Browse pada phpMyAdmin
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -99,18 +101,22 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [HASIL AKTUAL : berhasil. Sembilan atribut sesuai rancangan]
 
 [Insert_Data_Awal] 
-[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 dan tabel tbl_kontak_2622500005 - membuka tab insert - mengisi nama ; email ; semester ; tangga ; jenis_pesan ; minat ; prodi ; pesan ; id kosong - klik Go - periksa hasil input di menu Browser. 
+[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 dan tabel tbl_kontak_2622500005 - membuka tab insert - mengisi nama ; email ; semester ; tangga ; jenis_pesan ; minat ; prodi ; pesan ; id kosong - klik Go - periksa hasil input di menu browse. 
 Data 1 = 'Michael', 'michaeljiven@gmail.com', 1, '2026-11-24', 'kritik', 'HTML', 'SI', 'Testing']
 [Hasil Aktual : Berhasil. Data berhasil dimasukkan tanpa pesan kesalahan, nilai setiap atribut sesuai dan id terbentuk otomatis (1)]
 
 [SQL_INSERT]
-[LANGKAH PENGUJIAN : memeprhatian hubungan antara perintah INSERT dan atribut tabel yang telah dibuat. Memeriksa nama tabel = tbl_kontak_2622500005 - daftar atribut = nama ; email ; semester ;  tanggal ; jenis_pesan ; minat ; prodi ; pesan ; id tidak ditulis - klik Go INSERT melalui tab SQL - periksa hasil pada menu Browser]
+[LANGKAH PENGUJIAN : memeprhatian hubungan antara perintah INSERT dan atribut tabel yang telah dibuat. Memeriksa nama tabel = tbl_kontak_2622500005 - daftar atribut = nama ; email ; semester ;  tanggal ; jenis_pesan ; minat ; prodi ; pesan ; id tidak ditulis - klik Go INSERT melalui tab SQL - periksa hasil pada menu browse]
 [HASIL AKTUAL : Berhasil INSERT INSERT INTO tbl_kontak_2622500005
   (nama, email, semester, tanggal, jenis_pesan, minat, prodi, pesan)
 VALUES
   ('Andi', 'andi@example.com', 2, '2026-11-24',
    'pertanyaan', 'HTML, CSS', 'TI', 'Saya ingin belajar pemrograman web.');
 Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CSS', 'BD', Testing 2]
+
+[Browse_Data]
+[LANGKAH PENGUJIAN : memilih tabel tbl_kontak_2622500005, membuka menu Browse, memeriksa hasil input (data 1 & 2) termasuk id yang terbentuk otomatis]
+[HASIL AKTUAL : Berhasil. Data 1 & 2 tercatat/tersimpan pada phpMyAmin]
 
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
@@ -129,3 +135,4 @@ Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CS
 [Struktur_Tabel] : Memeriksa struktur tabel menggunakan DESCRIBE [nama_tabel]
 [Insert_Data_Awal]  : Memasukkan data awal ke tabel kontak
 [SQL_INSERT] : Mempelajari perintah SQL insert
+[Browse_Data] : memeriksa data awal pada tabel kontak
