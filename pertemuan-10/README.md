@@ -48,6 +48,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Browse_Data] : memeriksa data awal pada tabel kontak menggunakan fitur Browse pada phpMyAdmin
 
+[Kesesuaian_Data] : memeriksa dan memperbaiki data awal tabel kontak agar sesuai dengan karakteristik atribut dan ketentuan formulir P9
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
 [LANGKAH PENGUJIAN : membuka Laragon - Klik Nav Database - myPhpAdmin]
@@ -118,6 +120,12 @@ Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CS
 [LANGKAH PENGUJIAN : memilih tabel tbl_kontak_2622500005, membuka menu Browse, memeriksa hasil input (data 1 & 2) termasuk id yang terbentuk otomatis]
 [HASIL AKTUAL : Berhasil. Data 1 & 2 tercatat/tersimpan pada phpMyAmin]
 
+[Kesesuaian_Data] 
+[LANGKAH PENGUJIAN : memeriksa seluruh data pada menu Browse. nama = nama mahasiswa ; email = alamat email ; semester = angka semester ; tanggal = format tanggal ; jenis_pesan = peratanyaan atau saran ; minat = HTML, CSS ; prodi = SI, TI, PTI, BD ; pesan = teks sesuai batasan formulir
+Perbaikan : 
+Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang hasil pada Browse]
+[HASIL AKTUAL : Berhasil. Isi pada Data 1 berhasil diedit]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -136,3 +144,4 @@ Data 2 = 'Jiven', 'jivenaje@gmail.com', 2, '2026-11-24', 'pertanyaan', 'HTML, CS
 [Insert_Data_Awal]  : Memasukkan data awal ke tabel kontak
 [SQL_INSERT] : Mempelajari perintah SQL insert
 [Browse_Data] : memeriksa data awal pada tabel kontak
+[Penyesuaian_Data] : Memeriksa dan memperbaiki data awal tabel kontak
