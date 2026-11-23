@@ -52,6 +52,7 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Export_SQL] : menentukan pengaturan ekspor struktur dan data basis data db_pwd_2622500005 menggunakan Export pada phpMyAdmin
 
+[db_pwd_2622500005.sql] : berkas hasil ekspor yagn berisi struktur tabel dan data awal basis data db_pwd_2622500005
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [phpMyAdmin]
@@ -133,6 +134,10 @@ Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang h
 [LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 pada panel navigasi phpMyAdmin, membuka tab Export, lalu memriksa pengaturan eksport. Export Method = Quick ; Format = SQL]
 [HASIL AKTUAL : basis data db_pwd_2622500005 terpilih dan pengaturan ekspor menggunakna metode Quick dengan format SQL]
 
+[db_pwd_2622500005.sql] 
+[LANGKAH PENGUJIAN : memilih basis data db_pwd_2622500005 - membuka tab Export - pilih metode Quick - pilih format SQL - klik Export - namaa file db_pwd_2622500005 - pindah ke C:\laragon\www\2622500005-PWD-SI1A-2627O\pertemuan-10]
+[HASIL AKTUAL : Berhasil. file db_pwd_2622500005.sql berhasil diekspor dan tersimpan pada pertemuan-10]
+
 === Riwayat Pengembangan (COMMIT) ===
 [pertemuan-10] : menyalin artefak pertemuan-09 ke pertemuan-10 sebagai baseline 
 [phpMyAdmin] : mengelola basis data MySQL melalui antarmuka berbasis web.
@@ -153,3 +158,4 @@ Data 1 : jenis_pesan = kritik -> jenis_pesan = pertanyaan lalu memeriksa ulang h
 [Browse_Data] : memeriksa data awal pada tabel kontak
 [Penyesuaian_Data] : Memeriksa dan memperbaiki data awal tabel kontak
 [Export_SQL] : Menentukan pengaturan ekspor basis data
+[db_pwd_2622500005.sql] : Mengekspor basis data ke berkas SQL
