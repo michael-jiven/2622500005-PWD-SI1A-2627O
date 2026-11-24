@@ -23,6 +23,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [koneksi.php] : memastikan nama berkas dan penulisan perintah require_once("koneksi.php"); koneksi.php telah tersedia pada direktori yang sama dengan index.php.
 
+[requice_once] : memuat berkas koneksi pada halaman utama aplikasi 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -65,7 +67,17 @@ database = "db_tidak_tersedia";]
 [koneksi.php] 
 [LANGKAH PENGUJIAN : 
 require_once("koneksi.php");]
-[HASIL AKTUAL : Ada. require_once("koneksi.php"); pada index.php]
+[HASIL AKTUAL : Ada. require_once("koneksi.php"); telah satu direktori dengan index.php]
+
+[requice_once] 
+[LANGKAH PENGUJIAN : 
+require_once("fungsi.php");
+
+require_once("koneksi.php");]
+[HASIL AKTUAL : Berhasil. 
+require_once("fungsi.php");
+
+require_once("koneksi.php"); pada index.php]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
@@ -78,3 +90,4 @@ require_once("koneksi.php");]
 [uji_koneksi.php-berhasil] : Menguji koneksi dari PHP ke MySQL dengan file sementara bernama uji_koneksi.php
 [uji_koneksi.php-gagal] : Menguji penanganan kegagaln koneksi PHP_MySQL
 [koneksi.php] : Menyiapkan pemuatan berkas koneksi pada P11
+[requice_once] : Mengintegrasikan berkas koneksi pada index P11
