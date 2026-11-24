@@ -25,6 +25,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [requice_once] : memuat berkas koneksi pada halaman utama aplikasi 
 
+[index.php-koneksi.php] : memastikan index.php memuat koneksi.php
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -91,3 +93,4 @@ require_once("koneksi.php"); pada index.php]
 [uji_koneksi.php-gagal] : Menguji penanganan kegagaln koneksi PHP_MySQL
 [koneksi.php] : Menyiapkan pemuatan berkas koneksi pada P11
 [requice_once] : Mengintegrasikan berkas koneksi pada index P11
+[index.php-koneksi.php] : Memeriksa alur ketersediaan koneksi pada index P11
