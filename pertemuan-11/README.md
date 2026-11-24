@@ -17,7 +17,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [mysqli_connect] : membuat koneksi antara PHP dan MySQL berdasarkan parameter yang telah ditentukan
 
-[uji_koneksi.php] : menguji keberhasilan koneksi PHP dan MySQL
+[uji_koneksi.php-berhasil] : menguji keberhasilan koneksi PHP dan MySQL
+
+[uji_koneksi.php-gagal] : menguji kegagalan koneksi PHP dan MySQL
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
@@ -44,13 +46,19 @@ if(!$koneksi) {
 }]
 [HASIL AKTUAL : -]
 
-[uji_koneksi.php]
+[uji_koneksi.php-berhasil]
 [LANGKAH PENGUJIAN :
 <?php 
 require_once("koneksi.php");
 
 echo "Koneksi ke basis data berhasil."; ]
 [HASIL AKTUAL : Berhasil. "Koneksi ke basis data berhasil"]
+
+[uji_koneksi.php-gagal]
+[LANGKAH PENGUJIAN : 
+database = "db_tidak_tersedia";]
+[HASIL AKTUAL : Gagal. Warning: mysqli_connect(): (HY000/1049): Unknown database 'db_tidak_tersedia' in C:\laragon\www\2622500005-PWD-SI1A-2627O\pertemuan-11\koneksi.php on line 10
+"Koneksi ke basis data gagal."]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
@@ -60,4 +68,5 @@ echo "Koneksi ke basis data berhasil."; ]
 [Parameter_Koneksi] : Menentukan parameter koneksi basis data P11
 [Pelaporan_Kegagalan_MySQLI] : Mengatur pelaporan kesalahan MySQLi P11
 [mysqli_connect] : Mengimplementasikan koneksi PHP-MySQL menggunakan MySQLi
-[uji_koneksi.php] : Menguji koneksi dari PHP ke MySQL dengan file sementara bernama uji_koneksi.php
+[uji_koneksi.php-berhasil] : Menguji koneksi dari PHP ke MySQL dengan file sementara bernama uji_koneksi.php
+[uji_koneksi.php-gagal] : Menguji penanganan kegagaln koneksi PHP_MySQL

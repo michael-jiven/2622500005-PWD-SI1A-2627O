@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "db_pwd_2622500005";
+$database = "db_tidak_tersedia";
 
 mysqli_report(MYSQLI_REPORT_OFF);
 
