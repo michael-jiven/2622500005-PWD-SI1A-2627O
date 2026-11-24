@@ -2,7 +2,6 @@
 Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 === Fitur dan Pengembangan ===
-
 [Artefak_P10] : menyiapkan artefak dari pertemuan 10 ke pertemuan 11 sebagai baseline
 
 [Artefak_P11] : menyiapkan direktori dan lingkungan pengembangan pertemuan-11
@@ -26,6 +25,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 [requice_once] : memuat berkas koneksi pada halaman utama aplikasi 
 
 [index.php-koneksi.php] : memastikan index.php memuat koneksi.php
+
+[koneksi.php-db_pwd_2622500005] : menguji integrasi PHP dengan MySQL 
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
@@ -81,6 +82,11 @@ require_once("fungsi.php");
 
 require_once("koneksi.php"); pada index.php]
 
+[koneksi.php-db_pwd_2622500005]
+[LANGKAH PENGUJIAN : 
+http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
+[HASIL AKTUAL : Berhasil. Halaman index.php bisa dipuka tanpa muncul pesan "Koneksi ke basis data gagal."]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -94,3 +100,4 @@ require_once("koneksi.php"); pada index.php]
 [koneksi.php] : Menyiapkan pemuatan berkas koneksi pada P11
 [requice_once] : Mengintegrasikan berkas koneksi pada index P11
 [index.php-koneksi.php] : Memeriksa alur ketersediaan koneksi pada index P11
+[koneksi.php-db_pwd_2622500005] : Menguji integrasi koneksi PHP-MySQL pada index P11
