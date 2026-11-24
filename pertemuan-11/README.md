@@ -17,6 +17,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [mysqli_connect] : membuat koneksi antara PHP dan MySQL berdasarkan parameter yang telah ditentukan
 
+[uji_koneksi.php] : menguji keberhasilan koneksi PHP dan MySQL
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -42,6 +44,14 @@ if(!$koneksi) {
 }]
 [HASIL AKTUAL : -]
 
+[uji_koneksi.php]
+[LANGKAH PENGUJIAN :
+<?php 
+require_once("koneksi.php");
+
+echo "Koneksi ke basis data berhasil."; ]
+[HASIL AKTUAL : Berhasil. "Koneksi ke basis data berhasil"]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -50,3 +60,4 @@ if(!$koneksi) {
 [Parameter_Koneksi] : Menentukan parameter koneksi basis data P11
 [Pelaporan_Kegagalan_MySQLI] : Mengatur pelaporan kesalahan MySQLi P11
 [mysqli_connect] : Mengimplementasikan koneksi PHP-MySQL menggunakan MySQLi
+[uji_koneksi.php] : Menguji koneksi dari PHP ke MySQL dengan file sementara bernama uji_koneksi.php
