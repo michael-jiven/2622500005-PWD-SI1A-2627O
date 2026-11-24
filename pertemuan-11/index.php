@@ -5,6 +5,8 @@ require_once("fungsi.php");
 
 require_once("koneksi.php");
 
+$sql = "SELECT * FROM tbl_kontak_2622500005";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nama = trim((string) ($_POST["nama"] ?? ""));
   $email = trim((string) ($_POST["email"] ?? ""));

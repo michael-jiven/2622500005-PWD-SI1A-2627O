@@ -28,6 +28,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [koneksi.php-db_pwd_2622500005] : menguji integrasi PHP dengan MySQL 
 
+[SQL_SELECT] : mengambil data dari satu atau beberapa tabel dalam basis data.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -87,6 +89,11 @@ require_once("koneksi.php"); pada index.php]
 http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 [HASIL AKTUAL : Berhasil. Halaman index.php bisa dipuka tanpa muncul pesan "Koneksi ke basis data gagal."]
 
+[SQL_SELECT]
+[LANGKAH PENGUJIAN : 
+#(dollar)sql = "SELECT * FROM tbl_kontak_2622500005"; pada index.php]
+[HASIL AKTUAL : Berhasil. Menulis perintah SQL SELECT pada index.php]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -101,3 +108,4 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 [requice_once] : Mengintegrasikan berkas koneksi pada index P11
 [index.php-koneksi.php] : Memeriksa alur ketersediaan koneksi pada index P11
 [koneksi.php-db_pwd_2622500005] : Menguji integrasi koneksi PHP-MySQL pada index P11
+[SQL_SELECT] : Menentukan kueri SELECT data kontak
