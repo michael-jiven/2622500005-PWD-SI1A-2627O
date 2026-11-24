@@ -13,8 +13,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Parameter_Koneksi] : menentukan infofrmasi yang diperlukan untuk mengakses MySQL
 
-=== LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
+[Pelaporan_Kesalahan_MySQLi] : menyediakan mekanisme pelaoran kesalahan ketika mengalami kegagalan
 
+=== LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
 <?php 
@@ -25,9 +26,15 @@ $password = "";
 $database "db_pwd_2622500005"]
 [HASIL AKTUAL : -]
 
+[Pelaporan_Kegagalan_MySQLi]
+[LANGKAH PENGUJIAN : 
+mysqli_report(MYSQLI_REPORT_OFF);]
+[HASIL AKTUAL : -]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
 [Basis_Data_P11] : Memeriksa kesiapan basis data dan tabel kontak P11
 [koneksi.php] : Membuat berkas koneksi PHP-MySQL P11
 [Parameter_Koneksi] : Menentukan parameter koneksi basis data P11
+[Pelaporan_Kegagalan_MySQLI] : Mengatur pelaporan kesalahan MySQLi P11
