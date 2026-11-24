@@ -15,6 +15,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Pelaporan_Kesalahan_MySQLi] : menyediakan mekanisme pelaoran kesalahan ketika mengalami kegagalan
 
+[mysqli_connect] : membuat koneksi antara PHP dan MySQL berdasarkan parameter yang telah ditentukan
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -31,6 +33,15 @@ $database "db_pwd_2622500005"]
 mysqli_report(MYSQLI_REPORT_OFF);]
 [HASIL AKTUAL : -]
 
+[mysqli_connect] 
+[LANGKAH PENGUJIAN : 
+$koneksi = mysqli_connect($host, $user, $password, $database);
+
+if(!$koneksi) {
+. die("Koneksi ke basis data gagal.");
+}]
+[HASIL AKTUAL : -]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -38,3 +49,4 @@ mysqli_report(MYSQLI_REPORT_OFF);]
 [koneksi.php] : Membuat berkas koneksi PHP-MySQL P11
 [Parameter_Koneksi] : Menentukan parameter koneksi basis data P11
 [Pelaporan_Kegagalan_MySQLI] : Mengatur pelaporan kesalahan MySQLi P11
+[mysqli_connect] : Mengimplementasikan koneksi PHP-MySQL menggunakan MySQLi
