@@ -1,6 +1,47 @@
 <?php
 session_start();
 
+require_once("fungsi.php");
+
+<?php
+#kode setelah
+session_start();
+
+require_once("fungsi.php"); #Penggunaan require_once() memastikan berkas tersebut tersedia dan tidak dimuat berulang kali.
+
+// P9: Memproses data formulir dan menyimpannya ke dalam session.
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $nama = trim((string) ($_POST["nama"] ?? ""));
+  $email = trim((string) ($_POST["email"] ?? ""));
+  $semesterForm = trim((string) ($_POST["semester"] ?? ""));
+  $tanggal = trim((string) ($_POST["tanggal"] ?? ""));
+  $jenisPesan = trim((string) ($_POST["jenis_pesan"] ?? ""));
+  $minat = $_POST["minat"] ?? [];
+  $prodi = trim((string) ($_POST["prodi"] ?? ""));
+  $pesan = trim((string) ($_POST["pesan"] ?? ""));
+
+  // Checkbox dapat mengirimkan lebih dari satu nilai.
+  if (!is_array($minat)) {
+    $minat = [];
+  }
+
+  // Menyimpan semua data formulir ke dalam satu larik asosiatif di session.
+  $_SESSION["form_data"] = [
+    "nama"        => $nama,
+    "email"       => $email,
+    "semester"    => $semesterForm,
+    "tanggal"     => $tanggal,
+    "jenis_pesan" => $jenisPesan,
+    "minat"       => $minat,
+    "prodi"       => $prodi,
+    "pesan"       => $pesan,
+  ];
+
+  // PRG: mengarahkan kembali ke halaman sebelum menghasilkan keluaran HTML.
+  header("Location: index.php#contact");
+  exit;
+}
+
 $nama = "";
 $pesanKesalahan = '';
 if (isset($_POST['nama'])){
@@ -114,6 +155,7 @@ $prodi = $_SESSION['prodi'] ?? '';
 $minat = $_SESSION['minat'] ?? [];
 $pesan = $_SESSION['pesan'] ?? '';
 
+$teknologiWeb = ["HTML", "CSS", "JavaScript" , "PHP", "MySQL"]
 ?>
 <!doctype html>
 <html lang="id">
@@ -237,7 +279,23 @@ $pesan = $_SESSION['pesan'] ?? '';
             }
             ?>
           </ol>
-        </article>
+
+          <h3>Teknologi Web yang Dipelajari</h3>
+
+          <p>
+            Teknologi pertama yang dipelajari : 
+            <?= bersihkan($teknologiWeb[0]); ?>
+          </p>
+          
+          <p>Daftar teknologi yang dipelajari:</p> 
+          
+          <ul> 
+            <?php foreach ($teknologiWeb as $teknologi): ?> 
+              <li><?= bersihkan($teknologi); ?></li>
+            <?php endforeach; ?>
+          </ul>
+              
+              </article>
         <article> 
           <h3>Semester (Perulangan While):</h3>
           <ol>
