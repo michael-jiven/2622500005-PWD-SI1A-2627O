@@ -3,12 +3,6 @@ session_start();
 
 require_once("fungsi.php");
 
-<?php
-#kode setelah
-session_start();
-
-require_once("fungsi.php"); #Penggunaan require_once() memastikan berkas tersebut tersedia dan tidak dimuat berulang kali.
-
 // P9: Memproses data formulir dan menyimpannya ke dalam session.
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nama = trim((string) ($_POST["nama"] ?? ""));
@@ -53,7 +47,6 @@ if (isset($_POST['nama'])){
   $prodi = $_POST['prodi'] ?? '';
   $pesan = $_POST['pesan'] ?? '';
   $minat = $_POST['minat'] ?? [];
-
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (trim($nama ?? '') === ''){
       $pesanKesalahan .= 'Nama lengkap wajib diisi. ' ; 
@@ -155,7 +148,7 @@ $prodi = $_SESSION['prodi'] ?? '';
 $minat = $_SESSION['minat'] ?? [];
 $pesan = $_SESSION['pesan'] ?? '';
 
-$teknologiWeb = ["HTML", "CSS", "JavaScript" , "PHP", "MySQL"]
+$teknologiWeb = ["HTML", "CSS", "JavaScript" , "PHP", "MySQL"];
 ?>
 <!doctype html>
 <html lang="id">
