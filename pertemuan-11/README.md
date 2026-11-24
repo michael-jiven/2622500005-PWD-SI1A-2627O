@@ -21,6 +21,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [uji_koneksi.php-gagal] : menguji kegagalan koneksi PHP dan MySQL
 
+[koneksi.php] : memastikan nama berkas dan penulisan perintah require_once("koneksi.php"); koneksi.php telah tersedia pada direktori yang sama dengan index.php.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -60,6 +62,11 @@ database = "db_tidak_tersedia";]
 [HASIL AKTUAL : Gagal. Warning: mysqli_connect(): (HY000/1049): Unknown database 'db_tidak_tersedia' in C:\laragon\www\2622500005-PWD-SI1A-2627O\pertemuan-11\koneksi.php on line 10
 "Koneksi ke basis data gagal."]
 
+[koneksi.php] 
+[LANGKAH PENGUJIAN : 
+require_once("koneksi.php");]
+[HASIL AKTUAL : Ada. require_once("koneksi.php"); pada index.php]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -70,3 +77,4 @@ database = "db_tidak_tersedia";]
 [mysqli_connect] : Mengimplementasikan koneksi PHP-MySQL menggunakan MySQLi
 [uji_koneksi.php-berhasil] : Menguji koneksi dari PHP ke MySQL dengan file sementara bernama uji_koneksi.php
 [uji_koneksi.php-gagal] : Menguji penanganan kegagaln koneksi PHP_MySQL
+[koneksi.php] : Menyiapkan pemuatan berkas koneksi pada P11
