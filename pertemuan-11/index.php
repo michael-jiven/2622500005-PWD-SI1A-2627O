@@ -5,8 +5,12 @@ require_once("fungsi.php");
 
 require_once("koneksi.php");
 
-$sql = "SELECT * FROM tbl_kontak_2622500005";
+$sql = "SELECT * FROM tbl_tidak tersedia";
 $hasil = mysqli_query($koneksi, $sql);
+
+if (!$hasil) {
+  die("Kueri SELECT gagal dijalankan");
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nama = trim((string) ($_POST["nama"] ?? ""));

@@ -32,6 +32,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [mysqli_query-index.php] : menerima objek koneksi dan perintal SQL sebagai parameter
 
+[mysqli_query-index.php-gagal] : memastikan proses pengambilan data berhasil dengan sengaja menulis nama tabel dengan salah 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -101,6 +103,11 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 #(dolar)hasil = mysqli_query($koneksi, $myql) pada index.php]
 [HASIL AKTUAL : Berhasil. Menulis kode pada index.php setelah deklarasi $sql]
 
+[mysqli_query-index.php-gagal] 
+[LANGKAH PENGUJIAN : 
+(dolar)sql = "SELECT * FROM tbl_tidak tersedia";]
+[HASIL AKTUAL : Gagal. Muncul pesan "Kueri SELECT gagal dijalankan]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -117,3 +124,4 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 [koneksi.php-db_pwd_2622500005] : Menguji integrasi koneksi PHP-MySQL pada index P11
 [SQL_SELECT] : Menentukan kueri SELECT data kontak
 [mysqli_query-index.php] : Menjalankan kueri SELECT menggunakan MySQLi
+[mysqli_query-index.php-gagal] : Menambahkan pemeriksaan kegagaln kueri SELECT
