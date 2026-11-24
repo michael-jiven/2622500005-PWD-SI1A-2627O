@@ -30,6 +30,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [SQL_SELECT] : mengambil data dari satu atau beberapa tabel dalam basis data.
 
+[mysqli_query-index.php] : menerima objek koneksi dan perintal SQL sebagai parameter
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -91,8 +93,13 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 
 [SQL_SELECT]
 [LANGKAH PENGUJIAN : 
-#(dollar)sql = "SELECT * FROM tbl_kontak_2622500005"; pada index.php]
+#(dolar)sql = "SELECT * FROM tbl_kontak_2622500005"; pada index.php]
 [HASIL AKTUAL : Berhasil. Menulis perintah SQL SELECT pada index.php]
+
+[mysqli_query-index.php]
+[LANGKAH PENGUJIAN : 
+#(dolar)hasil = mysqli_query($koneksi, $myql) pada index.php]
+[HASIL AKTUAL : Berhasil. Menulis kode pada index.php setelah deklarasi $sql]
 
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
@@ -109,3 +116,4 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 [index.php-koneksi.php] : Memeriksa alur ketersediaan koneksi pada index P11
 [koneksi.php-db_pwd_2622500005] : Menguji integrasi koneksi PHP-MySQL pada index P11
 [SQL_SELECT] : Menentukan kueri SELECT data kontak
+[mysqli_query-index.php] : Menjalankan kueri SELECT menggunakan MySQLi
