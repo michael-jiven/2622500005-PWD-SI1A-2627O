@@ -34,6 +34,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [mysqli_query-index.php-gagal] : memastikan proses pengambilan data berhasil dengan sengaja menulis nama tabel dengan salah 
 
+[mysqli_fetch_assoc] : menghasilakn data yang dapat diambil secara bertahap. mengambil satu baris hasil kueri dalam bentuk larik asosiatif
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -108,6 +110,14 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 (dolar)sql = "SELECT * FROM tbl_tidak tersedia";]
 [HASIL AKTUAL : Gagal. Muncul pesan "Kueri SELECT gagal dijalankan]
 
+[mysqli_fetch_assoc] 
+[LANGKAH PENGUJIAN : 
+$dataKontak = [];
+while ($baris = mysqli_fetch_assoc($hasil)) {
+  $dataKontak[] = $baris;
+}]
+[HASIL AKTUAL : Berhasil. Menulis kode pada index.php setelah mysqli_query]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -125,3 +135,4 @@ http://localhost/2622500005-PWD-SI1A-2627O/pertemuan-11]
 [SQL_SELECT] : Menentukan kueri SELECT data kontak
 [mysqli_query-index.php] : Menjalankan kueri SELECT menggunakan MySQLi
 [mysqli_query-index.php-gagal] : Menambahkan pemeriksaan kegagaln kueri SELECT
+[mysqli_fetch_assoc] : Mengambil hasil SELECT menggunakan mysqli_fetch_assoc

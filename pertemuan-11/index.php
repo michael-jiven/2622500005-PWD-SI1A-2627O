@@ -5,11 +5,16 @@ require_once("fungsi.php");
 
 require_once("koneksi.php");
 
-$sql = "SELECT * FROM tbl_tidak tersedia";
+$sql = "SELECT * FROM tbl_kontak_2622500005";
 $hasil = mysqli_query($koneksi, $sql);
 
 if (!$hasil) {
   die("Kueri SELECT gagal dijalankan");
+}
+
+$dataKontak = [];
+while ($baris = mysqli_fetch_assoc($hasil)) {
+  $dataKontak[] = $baris;
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
