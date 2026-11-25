@@ -40,6 +40,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [Penyajian_Data_Basis_Data] : menampilkan data kontak hasil kueri SELECT dari basis data pada halaman web menggantikan data session, serta menangani kondisi ketika data tidak tersedia 
 
+[tbl_kontak_2622500005] : Mengekspor basis data yang digunakan selama praktikkum.
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -173,6 +175,12 @@ array(3) {
           <?php endif; ?> pada index.php]
 [HASIL AKTUAL : Berhasil. Data dari isi tabel tbl_kontak_2622500005 muncul pada index.php. Ketika data dari tabel tbl_kontak_2622500005 dihapus dan diinput ulang - berhasil dan muncul kembali di index.php dengan data baru]
 
+[tbl_kontak_2622500005]
+[LANGKAH PENGUJIAN : Menu - Tab Export - Quick - SQL - Export]
+[HASIL AKTUAL : Berhasil. Data baru berhasil terekspor dan tersimpan dalam direktori pertemuan-11
+Data = INSERT INTO `tbl_kontak_2622500005` (`nama`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`, `id`) VALUES
+('michael', 'michael@gmail.com', 1, '2026-11-26', 'saran', 'HTML', 'SI', 'basis data hebat, basis data kuat', 1);]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -193,3 +201,4 @@ array(3) {
 [mysqli_fetch_assoc] : Mengambil hasil SELECT menggunakan mysqli_fetch_assoc
 [vardump_()] : Memeriksa hasil pengambilan data kontak
 [Penyajian_Data_Basis_Data] : Menampilkan data kontak dari basis data pada halaman web
+[tbl_kontak_2622500005] : Menambahkan ekspor basis data praktikum
