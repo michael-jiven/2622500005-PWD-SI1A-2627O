@@ -38,6 +38,8 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [var_dump()] : memastikan data berhasil diambil dan disimpan ke dalam larik melalui pemeriksaan sementara 
 
+[Penyajian_Data_Basis_Data] : menampilkan data kontak hasil kueri SELECT dari basis data pada halaman web menggantikan data session, serta menangani kondisi ketika data tidak tersedia 
+
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
 [LANGKAH PENGUJIAN : 
@@ -148,6 +150,29 @@ array(3) {
     ["id"]=>
     string(1) "1"]
 
+[Penyajian_Data_Basis_Data]
+[LANGKAH PENGUJIAN : 
+<article id="hasilKontak" class="submission-result" aria-live="polite">
+          <h3>Data kontak dari Basis Data</h3>
+          <?php if (count($dataKontak) > 0): ?>
+            <?php foreach($dataKontak as $data): ?>
+             <section>
+                <p><strong>ID:</strong> <?= bersihkan($data["id"]); ?></p>
+                <p><strong>Nama:</strong> <?= bersihkan($data["nama"]); ?></p>
+                <p><strong>Email:</strong> <?= bersihkan($data["email"]); ?></p>
+                <p><strong>Semester:</strong> <?= bersihkan($data["semester"]); ?></p>
+                <p><strong>Tanggal Kunjungan:</strong> <?= bersihkan($data["tanggal"]); ?></p>
+                <p><strong>Jenis Pesan:</strong> <?= bersihkan($data["jenis_pesan"]); ?></p>
+                <p><strong>Topik yang Diminati:</strong> <?= bersihkan($data["minat"]); ?></p>
+                <p><strong>Program Studi:</strong> <?= bersihkan($data["prodi"]); ?></p>
+                <p><strong>Pesan:</strong> <?= nl2br (bersihkan($data["pesan"])); ?></p>
+              </section>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <p>Belum ada data kontak yang tersimpan.</p>
+          <?php endif; ?> pada index.php]
+[HASIL AKTUAL : Berhasil. Data dari isi tabel tbl_kontak_2622500005 muncul pada index.php. Ketika data dari tabel tbl_kontak_2622500005 dihapus dan diinput ulang - berhasil dan muncul kembali di index.php dengan data baru]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -167,3 +192,4 @@ array(3) {
 [mysqli_query-index.php-gagal] : Menambahkan pemeriksaan kegagaln kueri SELECT
 [mysqli_fetch_assoc] : Mengambil hasil SELECT menggunakan mysqli_fetch_assoc
 [vardump_()] : Memeriksa hasil pengambilan data kontak
+[Penyajian_Data_Basis_Data] : Menampilkan data kontak dari basis data pada halaman web
