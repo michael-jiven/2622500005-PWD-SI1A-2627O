@@ -34,7 +34,9 @@ Analisis Kebutuhan Data dan Dasar MySQL Satu Tabel
 
 [mysqli_query-index.php-gagal] : memastikan proses pengambilan data berhasil dengan sengaja menulis nama tabel dengan salah 
 
-[mysqli_fetch_assoc] : menghasilakn data yang dapat diambil secara bertahap. mengambil satu baris hasil kueri dalam bentuk larik asosiatif
+[mysqli_fetch_assoc] : menghasilakn data yang dapat diambil secara bertahap. mengambil satu baris hasil kueri dalam bentuk larik asosiatif.
+
+[var_dump()] : memastikan data berhasil diambil dan disimpan ke dalam larik melalui pemeriksaan sementara 
 
 === LANGKAH PENGUJIAN DAN HASIL AKTUAL ===
 [Parameter_Koneksi] 
@@ -118,6 +120,34 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
 }]
 [HASIL AKTUAL : Berhasil. Menulis kode pada index.php setelah mysqli_query]
 
+[vardump_()]
+[LANGKAH PENGUJIAN : 
+echo "<pre>";
+var_dump($dataKontak);
+echo "</pre>";]
+[HASIL AKTUAL : Berhasil. Data tabel berhasil diambil 
+array(3) {
+  [0]=>
+  array(9) {
+    ["nama"]=>
+    string(7) "Michael"
+    ["email"]=>
+    string(22) "michaeljiven@gmail.com"
+    ["semester"]=>
+    string(1) "1"
+    ["tanggal"]=>
+    string(10) "2026-11-24"
+    ["jenis_pesan"]=>
+    string(10) "pertanyaan"
+    ["minat"]=>
+    string(4) "HTML"
+    ["prodi"]=>
+    string(2) "SI"
+    ["pesan"]=>
+    string(7) "Testing"
+    ["id"]=>
+    string(1) "1"]
+
 === Riwayat Pengembangan (COMMIT) ===
 [Artefak_P10] : Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline
 [Artefak_P11] : Menyiapkan direktori dan lnigkungan pengembangan pertemuan-11
@@ -136,3 +166,4 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
 [mysqli_query-index.php] : Menjalankan kueri SELECT menggunakan MySQLi
 [mysqli_query-index.php-gagal] : Menambahkan pemeriksaan kegagaln kueri SELECT
 [mysqli_fetch_assoc] : Mengambil hasil SELECT menggunakan mysqli_fetch_assoc
+[vardump_()] : Memeriksa hasil pengambilan data kontak
